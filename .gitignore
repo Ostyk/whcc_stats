@@ -1,0 +1,38 @@
+# Python virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Generated data files (but keep docs/ for GitHub Pages)
+*.csv
+Warsaw_Hussars_Stats_*.xlsx
+batting_records_raw.csv
+warsaw_hussars_full_batting_summary.csv
+!requirements.txt
+
+# Old web scraper outputs
+*.html
+!docs/**/*.html
+*.json
+!docs/**/*.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Keep docs folder for GitHub Pages
+!docs/
