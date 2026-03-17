@@ -1,0 +1,577 @@
+{
+  "last_updated": "2026-03-17T16:18:29.968968",
+  "summary": {
+    "total_matches": 19,
+    "total_innings": 185,
+    "total_runs": 1949,
+    "total_players": 23,
+    "date_range": {
+      "start": "2025-04-06",
+      "end": "2025-10-05"
+    }
+  },
+  "batting": {
+    "season_stats": [
+      {
+        "batsman": "Ashwini Rajput",
+        "runs": 1,
+        "balls": 6,
+        "fours": 0,
+        "sixes": 0,
+        "out": 2,
+        "is_duck": 1,
+        "file": 2,
+        "sr": 16.67,
+        "average": 0.5,
+        "innings": 2
+      },
+      {
+        "batsman": "Brian Paszkowiak",
+        "runs": 0,
+        "balls": 3,
+        "fours": 0,
+        "sixes": 0,
+        "out": 1,
+        "is_duck": 1,
+        "file": 1,
+        "sr": 0.0,
+        "average": 0.0,
+        "innings": 1
+      },
+      {
+        "batsman": "Figo",
+        "runs": 90,
+        "balls": 88,
+        "fours": 9,
+        "sixes": 1,
+        "out": 5,
+        "is_duck": 1,
+        "file": 9,
+        "sr": 102.27,
+        "average": 18.0,
+        "innings": 9
+      },
+      {
+        "batsman": "Harshit Kumar Singh",
+        "runs": 14,
+        "balls": 15,
+        "fours": 2,
+        "sixes": 0,
+        "out": 2,
+        "is_duck": 0,
+        "file": 3,
+        "sr": 93.33,
+        "average": 7.0,
+        "innings": 3
+      },
+      {
+        "batsman": "Hashim Rahman",
+        "runs": 10,
+        "balls": 31,
+        "fours": 0,
+        "sixes": 0,
+        "out": 3,
+        "is_duck": 1,
+        "file": 6,
+        "sr": 32.26,
+        "average": 3.33,
+        "innings": 6
+      },
+      {
+        "batsman": "Jakub Blazejczyk",
+        "runs": 24,
+        "balls": 74,
+        "fours": 0,
+        "sixes": 0,
+        "out": 6,
+        "is_duck": 2,
+        "file": 7,
+        "sr": 32.43,
+        "average": 4.0,
+        "innings": 7
+      },
+      {
+        "batsman": "Jakub Zagozdzon",
+        "runs": 12,
+        "balls": 5,
+        "fours": 1,
+        "sixes": 1,
+        "out": 1,
+        "is_duck": 0,
+        "file": 1,
+        "sr": 240.0,
+        "average": 12.0,
+        "innings": 1
+      },
+      {
+        "batsman": "Jerzy Suchodolski",
+        "runs": 2,
+        "balls": 1,
+        "fours": 0,
+        "sixes": 0,
+        "out": 0,
+        "is_duck": 0,
+        "file": 1,
+        "sr": 200.0,
+        "average": Infinity,
+        "innings": 1
+      },
+      {
+        "batsman": "Konrad Kachel",
+        "runs": 1,
+        "balls": 4,
+        "fours": 0,
+        "sixes": 0,
+        "out": 2,
+        "is_duck": 1,
+        "file": 2,
+        "sr": 25.0,
+        "average": 0.5,
+        "innings": 2
+      },
+      {
+        "batsman": "Kurt DSouza",
+        "runs": 145,
+        "balls": 170,
+        "fours": 13,
+        "sixes": 0,
+        "out": 10,
+        "is_duck": 2,
+        "file": 10,
+        "sr": 85.29,
+        "average": 14.5,
+        "innings": 10
+      },
+      {
+        "batsman": "Matthew Keating",
+        "runs": 260,
+        "balls": 345,
+        "fours": 19,
+        "sixes": 2,
+        "out": 15,
+        "is_duck": 3,
+        "file": 17,
+        "sr": 75.36,
+        "average": 17.33,
+        "innings": 17
+      },
+      {
+        "batsman": "Michal OstykNarbutt",
+        "runs": 147,
+        "balls": 178,
+        "fours": 14,
+        "sixes": 2,
+        "out": 14,
+        "is_duck": 4,
+        "file": 16,
+        "sr": 82.58,
+        "average": 10.5,
+        "innings": 16
+      },
+      {
+        "batsman": "Nazroon Najumudeen",
+        "runs": 127,
+        "balls": 180,
+        "fours": 6,
+        "sixes": 0,
+        "out": 13,
+        "is_duck": 2,
+        "file": 14,
+        "sr": 70.56,
+        "average": 9.77,
+        "innings": 14
+      },
+      {
+        "batsman": "Neel",
+        "runs": 331,
+        "balls": 304,
+        "fours": 32,
+        "sixes": 12,
+        "out": 19,
+        "is_duck": 0,
+        "file": 18,
+        "sr": 108.88,
+        "average": 17.42,
+        "innings": 18
+      },
+      {
+        "batsman": "Piotr Sochaj",
+        "runs": 0,
+        "balls": 4,
+        "fours": 0,
+        "sixes": 0,
+        "out": 1,
+        "is_duck": 1,
+        "file": 1,
+        "sr": 0.0,
+        "average": 0.0,
+        "innings": 1
+      },
+      {
+        "batsman": "Prabhat Singh Gusain",
+        "runs": 35,
+        "balls": 34,
+        "fours": 3,
+        "sixes": 1,
+        "out": 2,
+        "is_duck": 1,
+        "file": 3,
+        "sr": 102.94,
+        "average": 17.5,
+        "innings": 3
+      },
+      {
+        "batsman": "Sameer Gaur",
+        "runs": 103,
+        "balls": 147,
+        "fours": 8,
+        "sixes": 1,
+        "out": 11,
+        "is_duck": 1,
+        "file": 14,
+        "sr": 70.07,
+        "average": 9.36,
+        "innings": 14
+      },
+      {
+        "batsman": "Shankar Kartha",
+        "runs": 41,
+        "balls": 59,
+        "fours": 2,
+        "sixes": 0,
+        "out": 8,
+        "is_duck": 4,
+        "file": 9,
+        "sr": 69.49,
+        "average": 5.12,
+        "innings": 9
+      },
+      {
+        "batsman": "Shelako Almeida",
+        "runs": 9,
+        "balls": 7,
+        "fours": 1,
+        "sixes": 0,
+        "out": 2,
+        "is_duck": 1,
+        "file": 3,
+        "sr": 128.57,
+        "average": 4.5,
+        "innings": 3
+      },
+      {
+        "batsman": "Siddhesh Mervekar",
+        "runs": 145,
+        "balls": 149,
+        "fours": 9,
+        "sixes": 0,
+        "out": 11,
+        "is_duck": 3,
+        "file": 12,
+        "sr": 97.32,
+        "average": 13.18,
+        "innings": 12
+      },
+      {
+        "batsman": "Syed Adil",
+        "runs": 13,
+        "balls": 18,
+        "fours": 0,
+        "sixes": 0,
+        "out": 2,
+        "is_duck": 1,
+        "file": 3,
+        "sr": 72.22,
+        "average": 6.5,
+        "innings": 3
+      },
+      {
+        "batsman": "Utkarsh Bhatt",
+        "runs": 310,
+        "balls": 240,
+        "fours": 35,
+        "sixes": 4,
+        "out": 11,
+        "is_duck": 0,
+        "file": 12,
+        "sr": 129.17,
+        "average": 28.18,
+        "innings": 12
+      },
+      {
+        "batsman": "Wilfred R",
+        "runs": 129,
+        "balls": 149,
+        "fours": 7,
+        "sixes": 2,
+        "out": 14,
+        "is_duck": 3,
+        "file": 15,
+        "sr": 86.58,
+        "average": 9.21,
+        "innings": 15
+      }
+    ],
+    "leaderboards": {
+      "top_run_scorers": [
+        {
+          "batsman": "Neel",
+          "runs": 331,
+          "innings": 18,
+          "average": 17.42,
+          "sr": 108.88
+        },
+        {
+          "batsman": "Utkarsh Bhatt",
+          "runs": 310,
+          "innings": 12,
+          "average": 28.18,
+          "sr": 129.17
+        },
+        {
+          "batsman": "Matthew Keating",
+          "runs": 260,
+          "innings": 17,
+          "average": 17.33,
+          "sr": 75.36
+        },
+        {
+          "batsman": "Michal OstykNarbutt",
+          "runs": 147,
+          "innings": 16,
+          "average": 10.5,
+          "sr": 82.58
+        },
+        {
+          "batsman": "Kurt DSouza",
+          "runs": 145,
+          "innings": 10,
+          "average": 14.5,
+          "sr": 85.29
+        },
+        {
+          "batsman": "Siddhesh Mervekar",
+          "runs": 145,
+          "innings": 12,
+          "average": 13.18,
+          "sr": 97.32
+        },
+        {
+          "batsman": "Wilfred R",
+          "runs": 129,
+          "innings": 15,
+          "average": 9.21,
+          "sr": 86.58
+        },
+        {
+          "batsman": "Nazroon Najumudeen",
+          "runs": 127,
+          "innings": 14,
+          "average": 9.77,
+          "sr": 70.56
+        },
+        {
+          "batsman": "Sameer Gaur",
+          "runs": 103,
+          "innings": 14,
+          "average": 9.36,
+          "sr": 70.07
+        },
+        {
+          "batsman": "Figo",
+          "runs": 90,
+          "innings": 9,
+          "average": 18.0,
+          "sr": 102.27
+        }
+      ],
+      "highest_scores": [
+        {
+          "batsman": "Neel",
+          "runs": 82,
+          "balls": 54,
+          "sr": 151.85
+        },
+        {
+          "batsman": "Matthew Keating",
+          "runs": 75,
+          "balls": 65,
+          "sr": 115.38
+        },
+        {
+          "batsman": "Utkarsh Bhatt",
+          "runs": 70,
+          "balls": 40,
+          "sr": 175.0
+        },
+        {
+          "batsman": "Kurt DSouza",
+          "runs": 57,
+          "balls": 50,
+          "sr": 114.0
+        },
+        {
+          "batsman": "Michal OstykNarbutt",
+          "runs": 51,
+          "balls": 38,
+          "sr": 134.21
+        },
+        {
+          "batsman": "Utkarsh Bhatt",
+          "runs": 50,
+          "balls": 45,
+          "sr": 111.11
+        },
+        {
+          "batsman": "Siddhesh Mervekar",
+          "runs": 47,
+          "balls": 35,
+          "sr": 134.29
+        },
+        {
+          "batsman": "Utkarsh Bhatt",
+          "runs": 37,
+          "balls": 26,
+          "sr": 142.31
+        },
+        {
+          "batsman": "Neel",
+          "runs": 35,
+          "balls": 24,
+          "sr": 145.83
+        },
+        {
+          "batsman": "Siddhesh Mervekar",
+          "runs": 34,
+          "balls": 30,
+          "sr": 113.33
+        }
+      ],
+      "best_averages": [
+        {
+          "batsman": "Utkarsh Bhatt",
+          "average": 28.18,
+          "runs": 310,
+          "innings": 12
+        },
+        {
+          "batsman": "Figo",
+          "average": 18.0,
+          "runs": 90,
+          "innings": 9
+        },
+        {
+          "batsman": "Prabhat Singh Gusain",
+          "average": 17.5,
+          "runs": 35,
+          "innings": 3
+        },
+        {
+          "batsman": "Neel",
+          "average": 17.42,
+          "runs": 331,
+          "innings": 18
+        },
+        {
+          "batsman": "Matthew Keating",
+          "average": 17.33,
+          "runs": 260,
+          "innings": 17
+        },
+        {
+          "batsman": "Kurt DSouza",
+          "average": 14.5,
+          "runs": 145,
+          "innings": 10
+        },
+        {
+          "batsman": "Siddhesh Mervekar",
+          "average": 13.18,
+          "runs": 145,
+          "innings": 12
+        },
+        {
+          "batsman": "Jakub Zagozdzon",
+          "average": 12.0,
+          "runs": 12,
+          "innings": 1
+        },
+        {
+          "batsman": "Michal OstykNarbutt",
+          "average": 10.5,
+          "runs": 147,
+          "innings": 16
+        },
+        {
+          "batsman": "Nazroon Najumudeen",
+          "average": 9.77,
+          "runs": 127,
+          "innings": 14
+        }
+      ],
+      "best_strike_rates": [
+        {
+          "batsman": "Utkarsh Bhatt",
+          "sr": 129.17,
+          "runs": 310,
+          "balls": 240
+        },
+        {
+          "batsman": "Neel",
+          "sr": 108.88,
+          "runs": 331,
+          "balls": 304
+        },
+        {
+          "batsman": "Prabhat Singh Gusain",
+          "sr": 102.94,
+          "runs": 35,
+          "balls": 34
+        },
+        {
+          "batsman": "Figo",
+          "sr": 102.27,
+          "runs": 90,
+          "balls": 88
+        },
+        {
+          "batsman": "Siddhesh Mervekar",
+          "sr": 97.32,
+          "runs": 145,
+          "balls": 149
+        },
+        {
+          "batsman": "Wilfred R",
+          "sr": 86.58,
+          "runs": 129,
+          "balls": 149
+        },
+        {
+          "batsman": "Kurt DSouza",
+          "sr": 85.29,
+          "runs": 145,
+          "balls": 170
+        },
+        {
+          "batsman": "Michal OstykNarbutt",
+          "sr": 82.58,
+          "runs": 147,
+          "balls": 178
+        },
+        {
+          "batsman": "Matthew Keating",
+          "sr": 75.36,
+          "runs": 260,
+          "balls": 345
+        },
+        {
+          "batsman": "Nazroon Najumudeen",
+          "sr": 70.56,
+          "runs": 127,
+          "balls": 180
+        }
+      ]
+    }
+  },
+  "bowling": {}
+}

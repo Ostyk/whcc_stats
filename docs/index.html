@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warsaw Hussars Cricket Club - Statistics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🏏 Warsaw Hussars Cricket Club</h1>
+            <p class="subtitle">Season Statistics Dashboard</p>
+            <p class="last-updated">Last updated: <span id="lastUpdated"></span></p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Summary Cards -->
+        <section class="summary-cards">
+            <div class="card">
+                <h3>Total Matches</h3>
+                <p class="stat-value" id="totalMatches">-</p>
+            </div>
+            <div class="card">
+                <h3>Total Runs</h3>
+                <p class="stat-value" id="totalRuns">-</p>
+            </div>
+            <div class="card">
+                <h3>Total Players</h3>
+                <p class="stat-value" id="totalPlayers">-</p>
+            </div>
+            <div class="card">
+                <h3>Season</h3>
+                <p class="stat-value" id="dateRange">-</p>
+            </div>
+        </section>
+
+        <!-- Tabs Navigation -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab('batting')">Batting</button>
+            <button class="tab-button" onclick="showTab('bowling')">Bowling</button>
+            <button class="tab-button" onclick="showTab('allPlayers')">All Players</button>
+        </div>
+
+        <!-- Batting Tab -->
+        <div id="batting" class="tab-content active">
+            <h2>Batting Statistics</h2>
+            
+            <div class="leaderboards">
+                <div class="leaderboard">
+                    <h3>🏆 Top Run Scorers</h3>
+                    <table id="topRunScorers">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Player</th>
+                                <th>Runs</th>
+                                <th>Inn</th>
+                                <th>Avg</th>
+                                <th>SR</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <div class="leaderboard">
+                    <h3>⚡ Highest Scores</h3>
+                    <table id="highestScores">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Player</th>
+                                <th>Runs</th>
+                                <th>Balls</th>
+                                <th>SR</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <div class="leaderboard">
+                    <h3>📊 Best Averages</h3>
+                    <table id="bestAverages">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Player</th>
+                                <th>Avg</th>
+                                <th>Runs</th>
+                                <th>Inn</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <div class="leaderboard">
+                    <h3>🚀 Best Strike Rates</h3>
+                    <table id="bestStrikeRates">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Player</th>
+                                <th>SR</th>
+                                <th>Runs</th>
+                                <th>Balls</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bowling Tab -->
+        <div id="bowling" class="tab-content">
+            <h2>Bowling Statistics</h2>
+            
+            <div class="leaderboards">
+                <div class="leaderboard">
+                    <h3>🎯 Top Wicket Takers</h3>
+                    <table id="topWicketTakers">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Player</th>
+                                <th>Wkts</th>
+                                <th>Avg</th>
+                                <th>Econ</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <div class="leaderboard">
+                    <h3>🔥 Best Figures</h3>
+                    <table id="bestFigures">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Player</th>
+                                <th>Wkts</th>
+                                <th>Runs</th>
+                                <th>Overs</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <div class="leaderboard">
+                    <h3>💰 Best Economy</h3>
+                    <table id="bestEconomy">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Player</th>
+                                <th>Econ</th>
+                                <th>Overs</th>
+                                <th>Wkts</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- All Players Tab -->
+        <div id="allPlayers" class="tab-content">
+            <h2>All Players - Season Statistics</h2>
+            
+            <div class="search-box">
+                <input type="text" id="playerSearch" placeholder="Search player..." onkeyup="filterPlayers()">
+            </div>
+
+            <div class="player-table-container">
+                <table id="allPlayersTable">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0)">Player</th>
+                            <th onclick="sortTable(1)">Mat</th>
+                            <th onclick="sortTable(2)">Runs</th>
+                            <th onclick="sortTable(3)">Avg</th>
+                            <th onclick="sortTable(4)">SR</th>
+                            <th onclick="sortTable(5)">Balls</th>
+                            <th onclick="sortTable(6)">4s</th>
+                            <th onclick="sortTable(7)">6s</th>
+                        </tr>
+                    </thead>
+                    <tbody id="allPlayersList"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025-2026 Warsaw Hussars Cricket Club | Generated from CricHeroes scorecards</p>
+            <p><a href="https://github.com/Ostyk/whcc_stats" target="_blank">View on GitHub</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
