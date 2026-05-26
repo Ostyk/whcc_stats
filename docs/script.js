@@ -355,6 +355,8 @@ function displayAllPlayers(players) {
             <td>${formatValue(player.balls, 'balls')}</td>
             <td>${formatValue(player.fours, 'fours')}</td>
             <td>${formatValue(player.sixes, 'sixes')}</td>
+            <td>${formatValue(player.avg_batting_position, 'avg_batting_position')}</td>
+            <td>${formatValue(player.avg_overs_per_game, 'avg_overs_per_game')}</td>
         `;
         tbody.appendChild(tr);
     });

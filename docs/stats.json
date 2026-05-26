@@ -1,6 +1,6 @@
 {
   "2025": {
-    "last_updated": "2026-05-26T15:17:06.164396",
+    "last_updated": "2026-05-26T16:15:55.129860",
     "summary": {
       "total_matches": 19,
       "total_innings": 185,
@@ -22,9 +22,12 @@
           "out": 2,
           "is_duck": 1,
           "file": 2,
+          "position": 3.5,
           "sr": 16.67,
           "average": 0.5,
-          "innings": 2
+          "innings": 2,
+          "avg_batting_position": 3.5,
+          "avg_overs_per_game": 2.0
         },
         {
           "batsman": "Brian Paszkowiak",
@@ -35,9 +38,12 @@
           "out": 1,
           "is_duck": 1,
           "file": 1,
+          "position": 1.0,
           "sr": 0.0,
           "average": 0.0,
-          "innings": 1
+          "innings": 1,
+          "avg_batting_position": 1.0,
+          "avg_overs_per_game": 1.0
         },
         {
           "batsman": "Figo",
@@ -48,9 +54,12 @@
           "out": 5,
           "is_duck": 1,
           "file": 9,
+          "position": 8.555555555555555,
           "sr": 102.27,
           "average": 18.0,
-          "innings": 9
+          "innings": 9,
+          "avg_batting_position": 8.56,
+          "avg_overs_per_game": 2.28
         },
         {
           "batsman": "Harshit Kumar Singh",
@@ -61,9 +70,12 @@
           "out": 2,
           "is_duck": 0,
           "file": 3,
+          "position": 6.666666666666667,
           "sr": 93.33,
           "average": 7.0,
-          "innings": 3
+          "innings": 3,
+          "avg_batting_position": 6.67,
+          "avg_overs_per_game": 2.0
         },
         {
           "batsman": "Hashim Rahman",
@@ -74,9 +86,12 @@
           "out": 3,
           "is_duck": 1,
           "file": 6,
+          "position": 10.0,
           "sr": 32.26,
           "average": 3.33,
-          "innings": 6
+          "innings": 6,
+          "avg_batting_position": 10.0,
+          "avg_overs_per_game": 3.0
         },
         {
           "batsman": "Jakub Blazejczyk",
@@ -87,9 +102,12 @@
           "out": 6,
           "is_duck": 2,
           "file": 7,
+          "position": 8.0,
           "sr": 32.43,
           "average": 4.0,
-          "innings": 7
+          "innings": 7,
+          "avg_batting_position": 8.0,
+          "avg_overs_per_game": 3.3
         },
         {
           "batsman": "Jakub Zagozdzon",
@@ -100,9 +118,12 @@
           "out": 1,
           "is_duck": 0,
           "file": 1,
+          "position": 5.0,
           "sr": 240.0,
           "average": 12.0,
-          "innings": 1
+          "innings": 1,
+          "avg_batting_position": 5.0,
+          "avg_overs_per_game": 1.0
         },
         {
           "batsman": "Jerzy Suchodolski",
@@ -113,9 +134,12 @@
           "out": 0,
           "is_duck": 0,
           "file": 1,
+          "position": 11.0,
           "sr": 200.0,
           "average": 2.0,
-          "innings": 1
+          "innings": 1,
+          "avg_batting_position": 11.0,
+          "avg_overs_per_game": 0.0
         },
         {
           "batsman": "Konrad Kachel",
@@ -126,9 +150,12 @@
           "out": 2,
           "is_duck": 1,
           "file": 2,
+          "position": 11.0,
           "sr": 25.0,
           "average": 0.5,
-          "innings": 2
+          "innings": 2,
+          "avg_batting_position": 11.0,
+          "avg_overs_per_game": 0.0
         },
         {
           "batsman": "Kurt DSouza",
@@ -139,9 +166,12 @@
           "out": 10,
           "is_duck": 2,
           "file": 10,
+          "position": 4.6,
           "sr": 85.29,
           "average": 14.5,
-          "innings": 10
+          "innings": 10,
+          "avg_batting_position": 4.6,
+          "avg_overs_per_game": 4.13
         },
         {
           "batsman": "Matthew Keating",
@@ -152,9 +182,12 @@
           "out": 15,
           "is_duck": 3,
           "file": 17,
+          "position": 2.588235294117647,
           "sr": 75.36,
           "average": 17.33,
-          "innings": 17
+          "innings": 17,
+          "avg_batting_position": 2.59,
+          "avg_overs_per_game": 0.0
         },
         {
           "batsman": "Michal OstykNarbutt",
@@ -165,9 +198,12 @@
           "out": 14,
           "is_duck": 4,
           "file": 16,
+          "position": 5.625,
           "sr": 82.58,
           "average": 10.5,
-          "innings": 16
+          "innings": 16,
+          "avg_batting_position": 5.62,
+          "avg_overs_per_game": 1.0
         },
         {
           "batsman": "Nazroon Najumudeen",
@@ -178,9 +214,12 @@
           "out": 13,
           "is_duck": 2,
           "file": 14,
+          "position": 5.0,
           "sr": 70.56,
           "average": 9.77,
-          "innings": 14
+          "innings": 14,
+          "avg_batting_position": 5.0,
+          "avg_overs_per_game": 0.0
         },
         {
           "batsman": "Neel",
@@ -191,9 +230,12 @@
           "out": 19,
           "is_duck": 0,
           "file": 18,
+          "position": 2.5789473684210527,
           "sr": 108.88,
           "average": 17.42,
-          "innings": 18
+          "innings": 18,
+          "avg_batting_position": 2.58,
+          "avg_overs_per_game": 3.23
         },
         {
           "batsman": "Piotr Sochaj",
@@ -204,9 +246,12 @@
           "out": 1,
           "is_duck": 1,
           "file": 1,
+          "position": 6.0,
           "sr": 0.0,
           "average": 0.0,
-          "innings": 1
+          "innings": 1,
+          "avg_batting_position": 6.0,
+          "avg_overs_per_game": 0.0
         },
         {
           "batsman": "Prabhat Singh Gusain",
@@ -217,9 +262,12 @@
           "out": 2,
           "is_duck": 1,
           "file": 3,
+          "position": 4.5,
           "sr": 102.94,
           "average": 17.5,
-          "innings": 3
+          "innings": 3,
+          "avg_batting_position": 4.5,
+          "avg_overs_per_game": 3.33
         },
         {
           "batsman": "Sameer Gaur",
@@ -230,9 +278,12 @@
           "out": 11,
           "is_duck": 1,
           "file": 14,
+          "position": 6.333333333333333,
           "sr": 70.07,
           "average": 9.36,
-          "innings": 14
+          "innings": 14,
+          "avg_batting_position": 6.33,
+          "avg_overs_per_game": 3.86
         },
         {
           "batsman": "Shankar Kartha",
@@ -243,9 +294,12 @@
           "out": 8,
           "is_duck": 4,
           "file": 9,
+          "position": 4.666666666666667,
           "sr": 69.49,
           "average": 5.12,
-          "innings": 9
+          "innings": 9,
+          "avg_batting_position": 4.67,
+          "avg_overs_per_game": 2.25
         },
         {
           "batsman": "Shelako Almeida",
@@ -256,9 +310,12 @@
           "out": 2,
           "is_duck": 1,
           "file": 3,
+          "position": 9.333333333333334,
           "sr": 128.57,
           "average": 4.5,
-          "innings": 3
+          "innings": 3,
+          "avg_batting_position": 9.33,
+          "avg_overs_per_game": 1.0
         },
         {
           "batsman": "Siddhesh Mervekar",
@@ -269,9 +326,12 @@
           "out": 11,
           "is_duck": 3,
           "file": 12,
+          "position": 5.666666666666667,
           "sr": 97.32,
           "average": 13.18,
-          "innings": 12
+          "innings": 12,
+          "avg_batting_position": 5.67,
+          "avg_overs_per_game": 1.62
         },
         {
           "batsman": "Syed Adil",
@@ -282,9 +342,12 @@
           "out": 2,
           "is_duck": 1,
           "file": 3,
+          "position": 9.666666666666666,
           "sr": 72.22,
           "average": 6.5,
-          "innings": 3
+          "innings": 3,
+          "avg_batting_position": 9.67,
+          "avg_overs_per_game": 2.0
         },
         {
           "batsman": "Utkarsh Bhatt",
@@ -295,9 +358,12 @@
           "out": 11,
           "is_duck": 0,
           "file": 12,
+          "position": 2.769230769230769,
           "sr": 129.17,
           "average": 28.18,
-          "innings": 12
+          "innings": 12,
+          "avg_batting_position": 2.77,
+          "avg_overs_per_game": 4.25
         },
         {
           "batsman": "Wilfred R",
@@ -308,9 +374,12 @@
           "out": 14,
           "is_duck": 3,
           "file": 15,
+          "position": 6.875,
           "sr": 86.58,
           "average": 9.21,
-          "innings": 15
+          "innings": 15,
+          "avg_batting_position": 6.88,
+          "avg_overs_per_game": 2.95
         }
       ],
       "innings_records": [
@@ -3614,7 +3683,7 @@
     }
   },
   "2026": {
-    "last_updated": "2026-05-26T15:17:06.195025",
+    "last_updated": "2026-05-26T16:15:55.173125",
     "summary": {
       "total_matches": 3,
       "total_innings": 27,
@@ -3636,9 +3705,12 @@
           "out": 1,
           "is_duck": 1,
           "file": 2,
+          "position": 6.0,
           "sr": 84.0,
           "average": 21.0,
-          "innings": 2
+          "innings": 2,
+          "avg_batting_position": 6.0,
+          "avg_overs_per_game": 0.0
         },
         {
           "batsman": "Jakub Blazejczyk",
@@ -3649,9 +3721,12 @@
           "out": 1,
           "is_duck": 1,
           "file": 2,
+          "position": 10.0,
           "sr": 33.33,
           "average": 3.0,
-          "innings": 2
+          "innings": 2,
+          "avg_batting_position": 10.0,
+          "avg_overs_per_game": 3.0
         },
         {
           "batsman": "Kurt DSouza",
@@ -3662,9 +3737,12 @@
           "out": 3,
           "is_duck": 1,
           "file": 3,
+          "position": 5.333333333333333,
           "sr": 52.63,
           "average": 3.33,
-          "innings": 3
+          "innings": 3,
+          "avg_batting_position": 5.33,
+          "avg_overs_per_game": 3.83
         },
         {
           "batsman": "Matthew Keating",
@@ -3675,9 +3753,12 @@
           "out": 3,
           "is_duck": 0,
           "file": 3,
+          "position": 1.6666666666666667,
           "sr": 111.58,
           "average": 35.33,
-          "innings": 3
+          "innings": 3,
+          "avg_batting_position": 1.67,
+          "avg_overs_per_game": 0.0
         },
         {
           "batsman": "Michal OstykNarbutt",
@@ -3688,9 +3769,12 @@
           "out": 3,
           "is_duck": 0,
           "file": 3,
+          "position": 5.666666666666667,
           "sr": 80.56,
           "average": 9.67,
-          "innings": 3
+          "innings": 3,
+          "avg_batting_position": 5.67,
+          "avg_overs_per_game": 0.0
         },
         {
           "batsman": "Nazroon Najumudeen",
@@ -3701,9 +3785,12 @@
           "out": 1,
           "is_duck": 1,
           "file": 1,
+          "position": 3.0,
           "sr": 0.0,
           "average": 0.0,
-          "innings": 1
+          "innings": 1,
+          "avg_batting_position": 3.0,
+          "avg_overs_per_game": 3.0
         },
         {
           "batsman": "Neel",
@@ -3714,9 +3801,12 @@
           "out": 3,
           "is_duck": 0,
           "file": 3,
+          "position": 2.3333333333333335,
           "sr": 73.21,
           "average": 13.67,
-          "innings": 3
+          "innings": 3,
+          "avg_batting_position": 2.33,
+          "avg_overs_per_game": 4.0
         },
         {
           "batsman": "Prabhat Singh Gusain",
@@ -3727,9 +3817,12 @@
           "out": 1,
           "is_duck": 1,
           "file": 1,
+          "position": 4.0,
           "sr": 0.0,
           "average": 0.0,
-          "innings": 1
+          "innings": 1,
+          "avg_batting_position": 4.0,
+          "avg_overs_per_game": 0.0
         },
         {
           "batsman": "Sameer Gaur",
@@ -3740,9 +3833,12 @@
           "out": 2,
           "is_duck": 0,
           "file": 3,
+          "position": 7.333333333333333,
           "sr": 132.26,
           "average": 20.5,
-          "innings": 3
+          "innings": 3,
+          "avg_batting_position": 7.33,
+          "avg_overs_per_game": 5.0
         },
         {
           "batsman": "Sanjay Pawar",
@@ -3753,9 +3849,12 @@
           "out": 1,
           "is_duck": 0,
           "file": 1,
+          "position": 5.0,
           "sr": 86.36,
           "average": 19.0,
-          "innings": 1
+          "innings": 1,
+          "avg_batting_position": 5.0,
+          "avg_overs_per_game": 0.0
         },
         {
           "batsman": "Siddhesh Mervekar",
@@ -3766,9 +3865,12 @@
           "out": 1,
           "is_duck": 0,
           "file": 2,
+          "position": 3.5,
           "sr": 84.54,
           "average": 82.0,
-          "innings": 2
+          "innings": 2,
+          "avg_batting_position": 3.5,
+          "avg_overs_per_game": 2.0
         },
         {
           "batsman": "Utkarsh Bhatt",
@@ -3779,9 +3881,12 @@
           "out": 1,
           "is_duck": 0,
           "file": 1,
+          "position": 2.0,
           "sr": 184.62,
           "average": 24.0,
-          "innings": 1
+          "innings": 1,
+          "avg_batting_position": 2.0,
+          "avg_overs_per_game": 4.0
         },
         {
           "batsman": "Vishal Patil",
@@ -3792,9 +3897,12 @@
           "out": 1,
           "is_duck": 1,
           "file": 1,
+          "position": 9.0,
           "sr": 0.0,
           "average": 0.0,
-          "innings": 1
+          "innings": 1,
+          "avg_batting_position": 9.0,
+          "avg_overs_per_game": 1.0
         },
         {
           "batsman": "Wilfred R",
@@ -3805,9 +3913,12 @@
           "out": 0,
           "is_duck": 0,
           "file": 1,
+          "position": 10.0,
           "sr": 100.0,
           "average": 1.0,
-          "innings": 1
+          "innings": 1,
+          "avg_batting_position": 10.0,
+          "avg_overs_per_game": 3.0
         }
       ],
       "innings_records": [
