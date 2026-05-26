@@ -134,6 +134,18 @@ function displayStats(year) {
         displayLeaderboard('bestEconomy', statsData.bowling.leaderboards.best_economy, 
             ['bowler', 'economy', 'overs', 'wickets']);
     }
+
+    // Display fielding leaderboards
+    if (statsData.fielding && statsData.fielding.leaderboards) {
+        displayLeaderboard('mostCatches', statsData.fielding.leaderboards.most_catches,
+            ['fielder', 'catches', 'dismissals', 'matches']);
+        displayLeaderboard('mostRunOuts', statsData.fielding.leaderboards.most_run_outs,
+            ['fielder', 'run_outs', 'direct_hits', 'matches']);
+        displayLeaderboard('mostStumpings', statsData.fielding.leaderboards.most_stumpings,
+            ['fielder', 'stumpings', 'dismissals', 'matches']);
+        displayLeaderboard('mostDismissalsFielding', statsData.fielding.leaderboards.most_dismissals,
+            ['fielder', 'dismissals', 'catches', 'run_outs', 'stumpings']);
+    }
 }
 
 function showNoDataMessage(year) {
@@ -153,7 +165,8 @@ function showNoDataMessage(year) {
 
 function clearLeaderboards() {
     const tables = ['topRunScorers', 'highestScores', 'bestAverages', 'bestStrikeRates', 
-                    'mostFours', 'mostSixes', 'topWicketTakers', 'bestFigures', 'bestEconomy'];
+                    'mostFours', 'mostSixes', 'topWicketTakers', 'bestFigures', 'bestEconomy',
+                    'mostCatches', 'mostRunOuts', 'mostStumpings', 'mostDismissalsFielding'];
     tables.forEach(tableId => {
         const tbody = document.querySelector(`#${tableId} tbody`);
         if (tbody) tbody.innerHTML = '';

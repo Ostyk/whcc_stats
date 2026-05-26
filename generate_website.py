@@ -21,6 +21,7 @@ class ScorecardParser:
         self.scorecards_folder = Path(scorecards_folder)
         self.batting_records = []
         self.bowling_records = []
+        self.fielding_records = []
         
     def parse_all_scorecards(self):
         """Parse all PDF scorecards in the folder."""
@@ -48,9 +49,78 @@ class ScorecardParser:
                 match_datetime = self.extract_match_date(text)
                 self.extract_batting_records(text, pdf_file.name, match_datetime)
                 self.extract_bowling_records(text, pdf_file.name, match_datetime)
+                self.extract_fielding_records(text, pdf_file.name, match_datetime)
                 
         except Exception as e:
             print(f"  ✗ Error parsing {pdf_file.name}: {e}")
+
+    def _clean_player_name(self, name):
+        """Normalize player names from scorecard text."""
+        if not name:
+            return ""
+        cleaned = name.replace("†", "").replace("‡", "")
+        cleaned = re.sub(r"\s+", " ", cleaned).strip(" ,")
+        return cleaned
+
+    def _extract_fielding_events(self, status):
+        """Extract fielding events from a dismissal status string."""
+        events = []
+        status = status.strip()
+
+        if "not out" in status.lower():
+            return events
+
+        # Stumping: "st Keeper b Bowler"
+        st_match = re.search(r"\bst\s+(.+?)\s+b\s+", status, flags=re.IGNORECASE)
+        if st_match:
+            keeper = self._clean_player_name(st_match.group(1))
+            if keeper:
+                events.append({
+                    "fielder": keeper,
+                    "dismissal_type": "stumping",
+                    "direct": False
+                })
+
+        # Caught-and-bowled: "c & b Bowler"
+        cab_match = re.search(r"\bc\s*&\s*b\s+(.+)$", status, flags=re.IGNORECASE)
+        if cab_match:
+            bowler = self._clean_player_name(cab_match.group(1))
+            if bowler:
+                events.append({
+                    "fielder": bowler,
+                    "dismissal_type": "catch",
+                    "direct": False
+                })
+        else:
+            # Regular catch: "c Fielder b Bowler"
+            c_match = re.search(r"\bc\s+(.+?)\s+b\s+", status, flags=re.IGNORECASE)
+            if c_match:
+                fielder = self._clean_player_name(c_match.group(1))
+                if fielder and fielder != "&":
+                    events.append({
+                        "fielder": fielder,
+                        "dismissal_type": "catch",
+                        "direct": False
+                    })
+
+        # Run out: "run out Fielder" or "run out Fielder1 & Fielder2"
+        ro_match = re.search(r"\brun out\s+(?:\(([^)]+)\)|(.+))$", status, flags=re.IGNORECASE)
+        if ro_match:
+            names_str = ro_match.group(1) or ro_match.group(2) or ""
+            names_str = names_str.replace("/", " & ")
+            parts = re.split(r"\s+&\s+|,", names_str)
+            cleaned_names = [self._clean_player_name(p) for p in parts if self._clean_player_name(p)]
+
+            if cleaned_names:
+                direct_hit = len(cleaned_names) == 1
+                for fielder in cleaned_names:
+                    events.append({
+                        "fielder": fielder,
+                        "dismissal_type": "run_out",
+                        "direct": direct_hit
+                    })
+
+        return events
     
     def extract_match_date(self, text):
         """Extract match date from scorecard text."""
@@ -137,13 +207,13 @@ class ScorecardParser:
             end = all_innings[i+1].start() if i + 1 < len(all_innings) else len(text)
             innings_text = text[start:end]
             
-            bowling_match = re.search(r"Bowling\s+O\s+M\s+R\s+W\s+Econ", innings_text)
+            bowling_match = re.search(r"No\s+Bowler\s+O\s+M\s+R\s+W.*?Eco", innings_text)
             if not bowling_match:
                 continue
             
             bowling_section = innings_text[bowling_match.end():]
             
-            stop_match = re.search(r"(Fall of wickets|Extras:|Total:)", bowling_section)
+            stop_match = re.search(r"(Yet to Bat|Fall of wickets|Extras:|Total:)", bowling_section)
             if stop_match:
                 bowling_section = bowling_section[:stop_match.start()]
             
@@ -152,12 +222,13 @@ class ScorecardParser:
                 
                 bowling_pattern = re.compile(
                     r"^(\d+)\s+"
-                    r"([A-Za-z\s&'.()'-]+?)\s+"
-                    r"\(.*?\)\s+"
+                    r"([A-Za-z\s&'.()'’†-]+?)\s+"
+                    r"(?:\(.*?\)\s+)?"
                     r"([\d.]+)\s+"
                     r"(\d+)\s+"
                     r"(\d+)\s+"
                     r"(\d+)\s+"
+                    r"(?:\d+\s+){0,5}"
                     r"([\d.]+)$"
                 )
                 
@@ -172,13 +243,67 @@ class ScorecardParser:
                     
                     self.bowling_records.append({
                         "file": filename,
-                        "bowler": name.strip(),
+                        "bowler": self._clean_player_name(name),
                         "overs": float(overs),
                         "maidens": int(maidens),
                         "runs": int(runs),
                         "wickets": int(wickets),
                         "economy": float(econ),
                         "balls": balls,
+                        "match_date": match_datetime.isoformat() if match_datetime else None
+                    })
+
+    def extract_fielding_records(self, text, filename, match_datetime):
+        """Extract fielding events for Warsaw Hussars from opponent batting dismissals."""
+        all_innings = list(re.finditer(
+            r"(.+?)\s+\d+/\d+d?\s+\([\d.]+\s*Ov\)\s+\((\d+(?:st|nd))\s+Innings\)",
+            text
+        ))
+
+        for i, hdr in enumerate(all_innings):
+            batting_team = hdr.group(1).strip()
+
+            # Fielding events for Warsaw happen when opponent is batting.
+            if "Warsaw Hussars" in batting_team:
+                continue
+
+            start = hdr.start()
+            end = all_innings[i + 1].start() if i + 1 < len(all_innings) else len(text)
+            innings_text = text[start:end]
+
+            stop_match = re.search(r"Extras:|Total:", innings_text)
+            if stop_match:
+                innings_text = innings_text[:stop_match.start()]
+
+            batting_line_pattern = re.compile(
+                r"^(\d+)\s+"
+                r"([A-Za-z\s&'.()'’-]+?)\s+"
+                r"\(.*?\)\s+"
+                r"(.+?)\s+"
+                r"(\d+)\s+"
+                r"(\d+)\s+"
+                r"(\d+)\s+"
+                r"(\d+)\s+"
+                r"(\d+)\s+"
+                r"([\d.]+)$"
+            )
+
+            for line in innings_text.splitlines():
+                line = line.strip()
+                m = batting_line_pattern.match(line)
+                if not m:
+                    continue
+
+                _, batsman, status, *_ = m.groups()
+                events = self._extract_fielding_events(status)
+
+                for event in events:
+                    self.fielding_records.append({
+                        "file": filename,
+                        "fielder": event["fielder"],
+                        "dismissal_type": event["dismissal_type"],
+                        "direct": bool(event["direct"]),
+                        "opponent_batsman": self._clean_player_name(batsman),
                         "match_date": match_datetime.isoformat() if match_datetime else None
                     })
     
@@ -204,11 +329,21 @@ class ScorecardParser:
         df = df.sort_values(by="match_date")
         return df
 
+    def get_fielding_dataframe(self):
+        """Get fielding records as DataFrame."""
+        if not self.fielding_records:
+            return pd.DataFrame()
+
+        df = pd.DataFrame(self.fielding_records)
+        df["match_date"] = pd.to_datetime(df["match_date"])
+        df = df.sort_values(by="match_date")
+        return df
+
 
 class WebsiteGenerator:
     """Generate static HTML website with statistics."""
     
-    def __init__(self, batting_df=None, bowling_df=None, stats_by_year=None):
+    def __init__(self, batting_df=None, bowling_df=None, fielding_df=None, stats_by_year=None):
         # Support both old single-year and new multi-year format
         if stats_by_year is not None:
             self.stats_by_year = stats_by_year
@@ -217,6 +352,7 @@ class WebsiteGenerator:
             # Legacy single-year format
             self.batting_df = batting_df
             self.bowling_df = bowling_df
+            self.fielding_df = fielding_df
             self.multi_year = False
         self.output_dir = Path("docs")  # GitHub Pages serves from docs/ folder
         
@@ -232,7 +368,11 @@ class WebsiteGenerator:
             all_stats = {}
             for year, data in self.stats_by_year.items():
                 print(f"  Generating stats for {year}...")
-                stats_data = self.generate_stats_data(data['batting_df'], data['bowling_df'])
+                stats_data = self.generate_stats_data(
+                    data['batting_df'],
+                    data['bowling_df'],
+                    data.get('fielding_df', pd.DataFrame())
+                )
                 all_stats[year] = stats_data
             
             # Save combined data
@@ -240,7 +380,7 @@ class WebsiteGenerator:
                 json.dump(all_stats, f, indent=2)
         else:
             # Legacy single-year
-            stats_data = self.generate_stats_data(self.batting_df, self.bowling_df)
+            stats_data = self.generate_stats_data(self.batting_df, self.bowling_df, self.fielding_df)
             with open(self.output_dir / "stats.json", "w") as f:
                 json.dump(stats_data, f, indent=2)
         
@@ -259,13 +399,14 @@ class WebsiteGenerator:
         print(f"  - script.js")
         print(f"  - stats.json")
     
-    def generate_stats_data(self, batting_df, bowling_df):
+    def generate_stats_data(self, batting_df, bowling_df, fielding_df):
         """Generate comprehensive statistics data."""
         stats = {
             "last_updated": datetime.now().isoformat(),
             "summary": {},
             "batting": {},
-            "bowling": {}
+            "bowling": {},
+            "fielding": {}
         }
         
         if not batting_df.empty:
@@ -316,6 +457,11 @@ class WebsiteGenerator:
             
             stats["batting"] = {
                 "season_stats": season_stats.to_dict('records'),
+                "innings_records": batting_df.assign(
+                    match_date=batting_df['match_date'].dt.strftime("%Y-%m-%d")
+                )[[
+                    'match_date', 'file', 'batsman', 'runs', 'balls', 'fours', 'sixes', 'sr', 'status'
+                ]].to_dict('records'),
                 "leaderboards": {
                     "top_run_scorers": top_run_scorers,
                     "highest_scores": highest_scores,
@@ -362,6 +508,34 @@ class WebsiteGenerator:
                     "top_wicket_takers": top_wicket_takers,
                     "best_figures": best_figures,
                     "best_economy": best_economy
+                }
+            }
+
+        if not fielding_df.empty:
+            fielding_stats = fielding_df.groupby('fielder').agg(
+                catches=('dismissal_type', lambda s: int((s == 'catch').sum())),
+                run_outs=('dismissal_type', lambda s: int((s == 'run_out').sum())),
+                stumpings=('dismissal_type', lambda s: int((s == 'stumping').sum())),
+                direct_hits=('direct', lambda s: int(s.sum())),
+                matches=('file', 'nunique')
+            ).reset_index()
+
+            fielding_stats['dismissals'] = (
+                fielding_stats['catches'] +
+                fielding_stats['run_outs'] +
+                fielding_stats['stumpings']
+            )
+
+            best_match = fielding_df.groupby(['fielder', 'file']).size().reset_index(name='dismissals')
+
+            stats["fielding"] = {
+                "season_stats": fielding_stats.to_dict('records'),
+                "leaderboards": {
+                    "most_catches": fielding_stats.nlargest(10, 'catches')[['fielder', 'catches', 'dismissals', 'matches']].to_dict('records'),
+                    "most_run_outs": fielding_stats.nlargest(10, 'run_outs')[['fielder', 'run_outs', 'direct_hits', 'matches']].to_dict('records'),
+                    "most_stumpings": fielding_stats.nlargest(10, 'stumpings')[['fielder', 'stumpings', 'dismissals', 'matches']].to_dict('records'),
+                    "most_dismissals": fielding_stats.nlargest(10, 'dismissals')[['fielder', 'dismissals', 'catches', 'run_outs', 'stumpings']].to_dict('records'),
+                    "best_match_fielding": best_match.nlargest(10, 'dismissals')[['fielder', 'file', 'dismissals']].to_dict('records')
                 }
             }
         
@@ -430,6 +604,8 @@ class WebsiteGenerator:
         <div class="tabs">
             <button class="tab-button active" onclick="showTab('batting')">Batting</button>
             <button class="tab-button" onclick="showTab('bowling')">Bowling</button>
+            <button class="tab-button" onclick="showTab('fielding')">Fielding</button>
+            <button class="tab-button" onclick="showTab('inningsExplorer')">Innings Explorer</button>
             <button class="tab-button" onclick="showTab('allPlayers')">All Players</button>
         </div>
 
@@ -537,6 +713,46 @@ class WebsiteGenerator:
             </div>
         </div>
 
+        <!-- Innings Explorer Tab -->
+        <div id="inningsExplorer" class="tab-content">
+            <h2>Player Innings Explorer</h2>
+
+            <div class="year-selector" style="margin-top: 20px;">
+                <label for="playerInningsSelect">Player:</label>
+                <select id="playerInningsSelect" onchange="renderPlayerRecentInnings()"></select>
+
+                <label for="inningsLimit" style="margin-left: 20px;">Last N innings:</label>
+                <input
+                    id="inningsLimit"
+                    type="number"
+                    min="1"
+                    max="50"
+                    value="10"
+                    oninput="renderPlayerRecentInnings()"
+                    style="padding: 10px 12px; border: 2px solid #667eea; border-radius: 8px; width: 90px;"
+                >
+            </div>
+
+            <div class="leaderboard" style="margin-top: 20px;">
+                <h3 id="playerInningsTitle">Recent innings</h3>
+                <table id="playerRecentInningsTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Match</th>
+                            <th>Runs</th>
+                            <th>Balls</th>
+                            <th>4s</th>
+                            <th>6s</th>
+                            <th>SR</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="playerRecentInningsBody"></tbody>
+                </table>
+            </div>
+        </div>
+
         <!-- Bowling Tab -->
         <div id="bowling" class="tab-content">
             <h2>Bowling Statistics</h2>
@@ -584,6 +800,78 @@ class WebsiteGenerator:
                                 <th>Econ</th>
                                 <th>Overs</th>
                                 <th>Wkts</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fielding Tab -->
+        <div id="fielding" class="tab-content">
+            <h2>Fielding Statistics</h2>
+
+            <div class="leaderboards">
+                <div class="leaderboard">
+                    <h3>🧤 Most Catches</h3>
+                    <table id="mostCatches">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Player</th>
+                                <th>Catches</th>
+                                <th>Total Dismissals</th>
+                                <th>Mat</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <div class="leaderboard">
+                    <h3>🎯 Most Run Outs</h3>
+                    <table id="mostRunOuts">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Player</th>
+                                <th>Run Outs</th>
+                                <th>Direct Hits</th>
+                                <th>Mat</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <div class="leaderboard">
+                    <h3>🥅 Most Stumpings</h3>
+                    <table id="mostStumpings">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Player</th>
+                                <th>Stumpings</th>
+                                <th>Total Dismissals</th>
+                                <th>Mat</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <div class="leaderboard">
+                    <h3>🏆 Most Fielding Dismissals</h3>
+                    <table id="mostDismissalsFielding">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Player</th>
+                                <th>Dismissals</th>
+                                <th>Catches</th>
+                                <th>Run Outs</th>
+                                <th>Stumpings</th>
                             </tr>
                         </thead>
                         <tbody></tbody>
@@ -894,6 +1182,7 @@ footer a {
             f.write(css_content)
     
     def generate_js(self):
+        let currentInningsRecords = [];
         """Generate JavaScript file."""
         js_content = '''let allStatsData = null;
 let currentYear = '2026'; // Default to 2026
@@ -1018,8 +1307,78 @@ function displayStats(year) {
         
         // Display all players
         displayAllPlayers(statsData.batting.season_stats);
+        initializePlayerInningsExplorer(statsData.batting);
     } else {
         clearLeaderboards();
+        initializePlayerInningsExplorer({ innings_records: [] });
+    }
+        currentInningsRecords = (battingData && battingData.innings_records) ? battingData.innings_records : [];
+
+        if (currentInningsRecords.length === 0) {
+            select.innerHTML = '';
+            title.textContent = 'Recent innings';
+            tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; color: #888;">No innings data</td></tr>';
+            return;
+        }
+
+        const currentSelection = select.value;
+        const players = [...new Set(currentInningsRecords.map(r => r.batsman))].sort((a, b) => a.localeCompare(b));
+
+        select.innerHTML = players.map(player => `<option value="${player}">${player}</option>`).join('');
+
+        if (currentSelection && players.includes(currentSelection)) {
+            select.value = currentSelection;
+        } else {
+            select.value = players[0];
+        }
+
+        renderPlayerRecentInnings();
+    }
+
+    function renderPlayerRecentInnings() {
+        const select = document.getElementById('playerInningsSelect');
+        const limitInput = document.getElementById('inningsLimit');
+        const title = document.getElementById('playerInningsTitle');
+        const tbody = document.getElementById('playerRecentInningsBody');
+
+        if (!select || !limitInput || !title || !tbody) return;
+
+        const selectedPlayer = select.value;
+        const limit = Math.max(1, Math.min(50, parseInt(limitInput.value || '10', 10)));
+        limitInput.value = limit;
+
+        if (!selectedPlayer) {
+            tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; color: #888;">Select a player</td></tr>';
+            return;
+        }
+
+        const rows = currentInningsRecords
+            .filter(r => r.batsman === selectedPlayer)
+            .sort((a, b) => new Date(b.match_date) - new Date(a.match_date))
+            .slice(0, limit);
+
+        title.textContent = `${selectedPlayer} - last ${rows.length} innings`;
+
+        if (rows.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; color: #888;">No innings found</td></tr>';
+            return;
+        }
+
+        tbody.innerHTML = '';
+        rows.forEach(inn => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${formatValue(inn.match_date)}</td>
+                <td>${formatValue(inn.file)}</td>
+                <td>${formatValue(inn.runs, 'runs')}</td>
+                <td>${formatValue(inn.balls, 'balls')}</td>
+                <td>${formatValue(inn.fours, 'fours')}</td>
+                <td>${formatValue(inn.sixes, 'sixes')}</td>
+                <td>${formatValue(inn.sr, 'sr')}</td>
+                <td>${formatValue(inn.status)}</td>
+            `;
+            tbody.appendChild(tr);
+        });
     }
     
     // Display bowling leaderboards
@@ -1030,6 +1389,18 @@ function displayStats(year) {
             ['bowler', 'wickets', 'runs', 'overs']);
         displayLeaderboard('bestEconomy', statsData.bowling.leaderboards.best_economy, 
             ['bowler', 'economy', 'overs', 'wickets']);
+    }
+
+    // Display fielding leaderboards
+    if (statsData.fielding && statsData.fielding.leaderboards) {
+        displayLeaderboard('mostCatches', statsData.fielding.leaderboards.most_catches,
+            ['fielder', 'catches', 'dismissals', 'matches']);
+        displayLeaderboard('mostRunOuts', statsData.fielding.leaderboards.most_run_outs,
+            ['fielder', 'run_outs', 'direct_hits', 'matches']);
+        displayLeaderboard('mostStumpings', statsData.fielding.leaderboards.most_stumpings,
+            ['fielder', 'stumpings', 'dismissals', 'matches']);
+        displayLeaderboard('mostDismissalsFielding', statsData.fielding.leaderboards.most_dismissals,
+            ['fielder', 'dismissals', 'catches', 'run_outs', 'stumpings']);
     }
 }
 
@@ -1050,7 +1421,8 @@ function showNoDataMessage(year) {
 
 function clearLeaderboards() {
     const tables = ['topRunScorers', 'highestScores', 'bestAverages', 'bestStrikeRates', 
-                    'mostFours', 'mostSixes', 'topWicketTakers', 'bestFigures', 'bestEconomy'];
+                    'mostFours', 'mostSixes', 'topWicketTakers', 'bestFigures', 'bestEconomy',
+                    'mostCatches', 'mostRunOuts', 'mostStumpings', 'mostDismissalsFielding'];
     tables.forEach(tableId => {
         const tbody = document.querySelector(`#${tableId} tbody`);
         if (tbody) tbody.innerHTML = '';
@@ -1197,6 +1569,7 @@ def main():
         
         batting_df = parser.get_batting_dataframe()
         bowling_df = parser.get_bowling_dataframe()
+        fielding_df = parser.get_fielding_dataframe()
         
         if batting_df.empty and year == "2026":
             print(f"\n⚠️ No records found for {year} (this is normal if the season hasn't started)")
@@ -1212,10 +1585,15 @@ def main():
         print(f"  Unique players: {batting_df['batsman'].nunique()}")
         print(f"  Total runs: {batting_df['runs'].sum()}")
         print(f"  Total bowling records: {len(bowling_df)}")
+        print(f"  Total fielding events: {len(fielding_df)}")
         if not batting_df['match_date'].isna().all():
             print(f"  Date range: {batting_df['match_date'].min().strftime('%Y-%m-%d')} to {batting_df['match_date'].max().strftime('%Y-%m-%d')}")
         
-        stats_by_year[year] = {"batting_df": batting_df, "bowling_df": bowling_df}
+        stats_by_year[year] = {
+            "batting_df": batting_df,
+            "bowling_df": bowling_df,
+            "fielding_df": fielding_df
+        }
     
     if not stats_by_year:
         print("\n⚠️ No records found for any year.")

@@ -1,6 +1,6 @@
 {
   "2025": {
-    "last_updated": "2026-05-26T14:47:50.220036",
+    "last_updated": "2026-05-26T15:00:51.166047",
     "summary": {
       "total_matches": 19,
       "total_innings": 185,
@@ -698,10 +698,886 @@
         ]
       }
     },
-    "bowling": {}
+    "bowling": {
+      "season_stats": [
+        {
+          "bowler": "Ashwini Rajput",
+          "wickets": 2,
+          "runs": 81,
+          "balls": 36,
+          "overs": 6.0,
+          "maidens": 0,
+          "economy": 17.5,
+          "file": 3,
+          "average": 40.5,
+          "strike_rate": 18.0
+        },
+        {
+          "bowler": "Brian Paszkowiak",
+          "wickets": 0,
+          "runs": 7,
+          "balls": 6,
+          "overs": 1.0,
+          "maidens": 0,
+          "economy": 7.0,
+          "file": 1,
+          "average": 0.0,
+          "strike_rate": 0.0
+        },
+        {
+          "bowler": "Figo",
+          "wickets": 6,
+          "runs": 190,
+          "balls": 139,
+          "overs": 22.8,
+          "maidens": 1,
+          "economy": 8.79,
+          "file": 10,
+          "average": 31.67,
+          "strike_rate": 23.17
+        },
+        {
+          "bowler": "Harshit Kumar Singh",
+          "wickets": 3,
+          "runs": 27,
+          "balls": 24,
+          "overs": 4.0,
+          "maidens": 0,
+          "economy": 6.75,
+          "file": 2,
+          "average": 9.0,
+          "strike_rate": 8.0
+        },
+        {
+          "bowler": "Hashim Rahman",
+          "wickets": 10,
+          "runs": 212,
+          "balls": 162,
+          "overs": 27.0,
+          "maidens": 0,
+          "economy": 8.1,
+          "file": 9,
+          "average": 21.2,
+          "strike_rate": 16.2
+        },
+        {
+          "bowler": "Jakub Blazejczyk",
+          "wickets": 8,
+          "runs": 225,
+          "balls": 198,
+          "overs": 33.0,
+          "maidens": 1,
+          "economy": 7.1,
+          "file": 10,
+          "average": 28.12,
+          "strike_rate": 24.75
+        },
+        {
+          "bowler": "Jakub Zagozdzon",
+          "wickets": 0,
+          "runs": 8,
+          "balls": 6,
+          "overs": 1.0,
+          "maidens": 0,
+          "economy": 8.0,
+          "file": 1,
+          "average": 0.0,
+          "strike_rate": 0.0
+        },
+        {
+          "bowler": "Kurt DSouza",
+          "wickets": 15,
+          "runs": 305,
+          "balls": 274,
+          "overs": 45.4,
+          "maidens": 0,
+          "economy": 8.13,
+          "file": 11,
+          "average": 20.33,
+          "strike_rate": 18.27
+        },
+        {
+          "bowler": "Michal OstykNarbutt",
+          "wickets": 1,
+          "runs": 5,
+          "balls": 6,
+          "overs": 1.0,
+          "maidens": 0,
+          "economy": 5.0,
+          "file": 1,
+          "average": 5.0,
+          "strike_rate": 6.0
+        },
+        {
+          "bowler": "Neel",
+          "wickets": 18,
+          "runs": 441,
+          "balls": 349,
+          "overs": 58.1,
+          "maidens": 2,
+          "economy": 7.64,
+          "file": 18,
+          "average": 24.5,
+          "strike_rate": 19.39
+        },
+        {
+          "bowler": "Prabhat Singh Gusain",
+          "wickets": 6,
+          "runs": 73,
+          "balls": 60,
+          "overs": 10.0,
+          "maidens": 0,
+          "economy": 9.54,
+          "file": 3,
+          "average": 12.17,
+          "strike_rate": 10.0
+        },
+        {
+          "bowler": "Sameer Gaur",
+          "wickets": 23,
+          "runs": 464,
+          "balls": 395,
+          "overs": 65.7,
+          "maidens": 1,
+          "economy": 7.63,
+          "file": 17,
+          "average": 20.17,
+          "strike_rate": 17.17
+        },
+        {
+          "bowler": "Shankar Kartha",
+          "wickets": 7,
+          "runs": 114,
+          "balls": 108,
+          "overs": 18.0,
+          "maidens": 0,
+          "economy": 6.96,
+          "file": 8,
+          "average": 16.29,
+          "strike_rate": 15.43
+        },
+        {
+          "bowler": "Shelako Almeida",
+          "wickets": 0,
+          "runs": 21,
+          "balls": 6,
+          "overs": 1.0,
+          "maidens": 0,
+          "economy": 21.0,
+          "file": 1,
+          "average": 0.0,
+          "strike_rate": 0.0
+        },
+        {
+          "bowler": "Siddhesh Mervekar",
+          "wickets": 10,
+          "runs": 199,
+          "balls": 127,
+          "overs": 21.1,
+          "maidens": 0,
+          "economy": 11.22,
+          "file": 13,
+          "average": 19.9,
+          "strike_rate": 12.7
+        },
+        {
+          "bowler": "Syed Adil",
+          "wickets": 0,
+          "runs": 31,
+          "balls": 36,
+          "overs": 6.0,
+          "maidens": 0,
+          "economy": 5.17,
+          "file": 3,
+          "average": 0.0,
+          "strike_rate": 0.0
+        },
+        {
+          "bowler": "Utkarsh Bhatt",
+          "wickets": 13,
+          "runs": 348,
+          "balls": 306,
+          "overs": 51.0,
+          "maidens": 1,
+          "economy": 7.03,
+          "file": 12,
+          "average": 26.77,
+          "strike_rate": 23.54
+        },
+        {
+          "bowler": "Wilfred R",
+          "wickets": 12,
+          "runs": 390,
+          "balls": 301,
+          "overs": 50.1,
+          "maidens": 0,
+          "economy": 8.17,
+          "file": 17,
+          "average": 32.5,
+          "strike_rate": 25.08
+        }
+      ],
+      "leaderboards": {
+        "top_wicket_takers": [
+          {
+            "bowler": "Sameer Gaur",
+            "wickets": 23,
+            "average": 20.17,
+            "economy": 7.63
+          },
+          {
+            "bowler": "Neel",
+            "wickets": 18,
+            "average": 24.5,
+            "economy": 7.64
+          },
+          {
+            "bowler": "Kurt DSouza",
+            "wickets": 15,
+            "average": 20.33,
+            "economy": 8.13
+          },
+          {
+            "bowler": "Utkarsh Bhatt",
+            "wickets": 13,
+            "average": 26.77,
+            "economy": 7.03
+          },
+          {
+            "bowler": "Wilfred R",
+            "wickets": 12,
+            "average": 32.5,
+            "economy": 8.17
+          },
+          {
+            "bowler": "Hashim Rahman",
+            "wickets": 10,
+            "average": 21.2,
+            "economy": 8.1
+          },
+          {
+            "bowler": "Siddhesh Mervekar",
+            "wickets": 10,
+            "average": 19.9,
+            "economy": 11.22
+          },
+          {
+            "bowler": "Jakub Blazejczyk",
+            "wickets": 8,
+            "average": 28.12,
+            "economy": 7.1
+          },
+          {
+            "bowler": "Shankar Kartha",
+            "wickets": 7,
+            "average": 16.29,
+            "economy": 6.96
+          },
+          {
+            "bowler": "Figo",
+            "wickets": 6,
+            "average": 31.67,
+            "economy": 8.79
+          }
+        ],
+        "best_figures": [
+          {
+            "bowler": "Sameer Gaur",
+            "wickets": 5,
+            "runs": 18,
+            "overs": 3.4
+          },
+          {
+            "bowler": "Siddhesh Mervekar",
+            "wickets": 4,
+            "runs": 30,
+            "overs": 3.0
+          },
+          {
+            "bowler": "Hashim Rahman",
+            "wickets": 4,
+            "runs": 34,
+            "overs": 4.0
+          },
+          {
+            "bowler": "Sameer Gaur",
+            "wickets": 4,
+            "runs": 15,
+            "overs": 3.3
+          },
+          {
+            "bowler": "Neel",
+            "wickets": 4,
+            "runs": 21,
+            "overs": 5.0
+          },
+          {
+            "bowler": "Kurt DSouza",
+            "wickets": 4,
+            "runs": 14,
+            "overs": 3.2
+          },
+          {
+            "bowler": "Wilfred R",
+            "wickets": 4,
+            "runs": 31,
+            "overs": 5.0
+          },
+          {
+            "bowler": "Prabhat Singh Gusain",
+            "wickets": 4,
+            "runs": 14,
+            "overs": 4.0
+          },
+          {
+            "bowler": "Sameer Gaur",
+            "wickets": 3,
+            "runs": 64,
+            "overs": 7.0
+          },
+          {
+            "bowler": "Hashim Rahman",
+            "wickets": 3,
+            "runs": 19,
+            "overs": 3.0
+          }
+        ],
+        "best_economy": [
+          {
+            "bowler": "Syed Adil",
+            "economy": 5.17,
+            "overs": 6.0,
+            "wickets": 0
+          },
+          {
+            "bowler": "Harshit Kumar Singh",
+            "economy": 6.75,
+            "overs": 4.0,
+            "wickets": 3
+          },
+          {
+            "bowler": "Shankar Kartha",
+            "economy": 6.96,
+            "overs": 18.0,
+            "wickets": 7
+          },
+          {
+            "bowler": "Utkarsh Bhatt",
+            "economy": 7.03,
+            "overs": 51.0,
+            "wickets": 13
+          },
+          {
+            "bowler": "Jakub Blazejczyk",
+            "economy": 7.1,
+            "overs": 33.0,
+            "wickets": 8
+          },
+          {
+            "bowler": "Sameer Gaur",
+            "economy": 7.63,
+            "overs": 65.7,
+            "wickets": 23
+          },
+          {
+            "bowler": "Neel",
+            "economy": 7.64,
+            "overs": 58.1,
+            "wickets": 18
+          },
+          {
+            "bowler": "Hashim Rahman",
+            "economy": 8.1,
+            "overs": 27.0,
+            "wickets": 10
+          },
+          {
+            "bowler": "Kurt DSouza",
+            "economy": 8.13,
+            "overs": 45.4,
+            "wickets": 15
+          },
+          {
+            "bowler": "Wilfred R",
+            "economy": 8.17,
+            "overs": 50.1,
+            "wickets": 12
+          }
+        ]
+      }
+    },
+    "fielding": {
+      "season_stats": [
+        {
+          "fielder": "Figo",
+          "catches": 3,
+          "run_outs": 1,
+          "stumpings": 0,
+          "direct_hits": 3,
+          "matches": 4,
+          "dismissals": 4
+        },
+        {
+          "fielder": "Harshit Kumar Singh",
+          "catches": 1,
+          "run_outs": 0,
+          "stumpings": 0,
+          "direct_hits": 1,
+          "matches": 1,
+          "dismissals": 1
+        },
+        {
+          "fielder": "Hashim Rahman",
+          "catches": 4,
+          "run_outs": 0,
+          "stumpings": 0,
+          "direct_hits": 4,
+          "matches": 4,
+          "dismissals": 4
+        },
+        {
+          "fielder": "Jakub Blazejczyk",
+          "catches": 1,
+          "run_outs": 1,
+          "stumpings": 0,
+          "direct_hits": 2,
+          "matches": 2,
+          "dismissals": 2
+        },
+        {
+          "fielder": "Jerzy Suchodolski",
+          "catches": 0,
+          "run_outs": 0,
+          "stumpings": 1,
+          "direct_hits": 1,
+          "matches": 1,
+          "dismissals": 1
+        },
+        {
+          "fielder": "Kurt DSouza",
+          "catches": 3,
+          "run_outs": 1,
+          "stumpings": 0,
+          "direct_hits": 4,
+          "matches": 4,
+          "dismissals": 4
+        },
+        {
+          "fielder": "Matthew Keating",
+          "catches": 21,
+          "run_outs": 1,
+          "stumpings": 10,
+          "direct_hits": 31,
+          "matches": 14,
+          "dismissals": 32
+        },
+        {
+          "fielder": "Michal OstykNarbutt",
+          "catches": 1,
+          "run_outs": 0,
+          "stumpings": 0,
+          "direct_hits": 1,
+          "matches": 1,
+          "dismissals": 1
+        },
+        {
+          "fielder": "Nazroon Najumudeen",
+          "catches": 3,
+          "run_outs": 0,
+          "stumpings": 0,
+          "direct_hits": 3,
+          "matches": 3,
+          "dismissals": 3
+        },
+        {
+          "fielder": "Neel",
+          "catches": 9,
+          "run_outs": 2,
+          "stumpings": 0,
+          "direct_hits": 10,
+          "matches": 9,
+          "dismissals": 11
+        },
+        {
+          "fielder": "Prabhat Singh Gusain",
+          "catches": 0,
+          "run_outs": 1,
+          "stumpings": 0,
+          "direct_hits": 1,
+          "matches": 1,
+          "dismissals": 1
+        },
+        {
+          "fielder": "Sameer Gaur",
+          "catches": 5,
+          "run_outs": 0,
+          "stumpings": 0,
+          "direct_hits": 5,
+          "matches": 4,
+          "dismissals": 5
+        },
+        {
+          "fielder": "Shankar Kartha",
+          "catches": 2,
+          "run_outs": 1,
+          "stumpings": 0,
+          "direct_hits": 2,
+          "matches": 2,
+          "dismissals": 3
+        },
+        {
+          "fielder": "Siddhesh Mervekar",
+          "catches": 3,
+          "run_outs": 1,
+          "stumpings": 0,
+          "direct_hits": 4,
+          "matches": 3,
+          "dismissals": 4
+        },
+        {
+          "fielder": "Syed Adil",
+          "catches": 2,
+          "run_outs": 0,
+          "stumpings": 0,
+          "direct_hits": 2,
+          "matches": 1,
+          "dismissals": 2
+        },
+        {
+          "fielder": "Utkarsh Bhatt",
+          "catches": 3,
+          "run_outs": 1,
+          "stumpings": 0,
+          "direct_hits": 4,
+          "matches": 4,
+          "dismissals": 4
+        },
+        {
+          "fielder": "Wilfred R",
+          "catches": 4,
+          "run_outs": 2,
+          "stumpings": 0,
+          "direct_hits": 6,
+          "matches": 4,
+          "dismissals": 6
+        }
+      ],
+      "leaderboards": {
+        "most_catches": [
+          {
+            "fielder": "Matthew Keating",
+            "catches": 21,
+            "dismissals": 32,
+            "matches": 14
+          },
+          {
+            "fielder": "Neel",
+            "catches": 9,
+            "dismissals": 11,
+            "matches": 9
+          },
+          {
+            "fielder": "Sameer Gaur",
+            "catches": 5,
+            "dismissals": 5,
+            "matches": 4
+          },
+          {
+            "fielder": "Hashim Rahman",
+            "catches": 4,
+            "dismissals": 4,
+            "matches": 4
+          },
+          {
+            "fielder": "Wilfred R",
+            "catches": 4,
+            "dismissals": 6,
+            "matches": 4
+          },
+          {
+            "fielder": "Figo",
+            "catches": 3,
+            "dismissals": 4,
+            "matches": 4
+          },
+          {
+            "fielder": "Kurt DSouza",
+            "catches": 3,
+            "dismissals": 4,
+            "matches": 4
+          },
+          {
+            "fielder": "Nazroon Najumudeen",
+            "catches": 3,
+            "dismissals": 3,
+            "matches": 3
+          },
+          {
+            "fielder": "Siddhesh Mervekar",
+            "catches": 3,
+            "dismissals": 4,
+            "matches": 3
+          },
+          {
+            "fielder": "Utkarsh Bhatt",
+            "catches": 3,
+            "dismissals": 4,
+            "matches": 4
+          }
+        ],
+        "most_run_outs": [
+          {
+            "fielder": "Neel",
+            "run_outs": 2,
+            "direct_hits": 10,
+            "matches": 9
+          },
+          {
+            "fielder": "Wilfred R",
+            "run_outs": 2,
+            "direct_hits": 6,
+            "matches": 4
+          },
+          {
+            "fielder": "Figo",
+            "run_outs": 1,
+            "direct_hits": 3,
+            "matches": 4
+          },
+          {
+            "fielder": "Jakub Blazejczyk",
+            "run_outs": 1,
+            "direct_hits": 2,
+            "matches": 2
+          },
+          {
+            "fielder": "Kurt DSouza",
+            "run_outs": 1,
+            "direct_hits": 4,
+            "matches": 4
+          },
+          {
+            "fielder": "Matthew Keating",
+            "run_outs": 1,
+            "direct_hits": 31,
+            "matches": 14
+          },
+          {
+            "fielder": "Prabhat Singh Gusain",
+            "run_outs": 1,
+            "direct_hits": 1,
+            "matches": 1
+          },
+          {
+            "fielder": "Shankar Kartha",
+            "run_outs": 1,
+            "direct_hits": 2,
+            "matches": 2
+          },
+          {
+            "fielder": "Siddhesh Mervekar",
+            "run_outs": 1,
+            "direct_hits": 4,
+            "matches": 3
+          },
+          {
+            "fielder": "Utkarsh Bhatt",
+            "run_outs": 1,
+            "direct_hits": 4,
+            "matches": 4
+          }
+        ],
+        "most_stumpings": [
+          {
+            "fielder": "Matthew Keating",
+            "stumpings": 10,
+            "dismissals": 32,
+            "matches": 14
+          },
+          {
+            "fielder": "Jerzy Suchodolski",
+            "stumpings": 1,
+            "dismissals": 1,
+            "matches": 1
+          },
+          {
+            "fielder": "Figo",
+            "stumpings": 0,
+            "dismissals": 4,
+            "matches": 4
+          },
+          {
+            "fielder": "Harshit Kumar Singh",
+            "stumpings": 0,
+            "dismissals": 1,
+            "matches": 1
+          },
+          {
+            "fielder": "Hashim Rahman",
+            "stumpings": 0,
+            "dismissals": 4,
+            "matches": 4
+          },
+          {
+            "fielder": "Jakub Blazejczyk",
+            "stumpings": 0,
+            "dismissals": 2,
+            "matches": 2
+          },
+          {
+            "fielder": "Kurt DSouza",
+            "stumpings": 0,
+            "dismissals": 4,
+            "matches": 4
+          },
+          {
+            "fielder": "Michal OstykNarbutt",
+            "stumpings": 0,
+            "dismissals": 1,
+            "matches": 1
+          },
+          {
+            "fielder": "Nazroon Najumudeen",
+            "stumpings": 0,
+            "dismissals": 3,
+            "matches": 3
+          },
+          {
+            "fielder": "Neel",
+            "stumpings": 0,
+            "dismissals": 11,
+            "matches": 9
+          }
+        ],
+        "most_dismissals": [
+          {
+            "fielder": "Matthew Keating",
+            "dismissals": 32,
+            "catches": 21,
+            "run_outs": 1,
+            "stumpings": 10
+          },
+          {
+            "fielder": "Neel",
+            "dismissals": 11,
+            "catches": 9,
+            "run_outs": 2,
+            "stumpings": 0
+          },
+          {
+            "fielder": "Wilfred R",
+            "dismissals": 6,
+            "catches": 4,
+            "run_outs": 2,
+            "stumpings": 0
+          },
+          {
+            "fielder": "Sameer Gaur",
+            "dismissals": 5,
+            "catches": 5,
+            "run_outs": 0,
+            "stumpings": 0
+          },
+          {
+            "fielder": "Figo",
+            "dismissals": 4,
+            "catches": 3,
+            "run_outs": 1,
+            "stumpings": 0
+          },
+          {
+            "fielder": "Hashim Rahman",
+            "dismissals": 4,
+            "catches": 4,
+            "run_outs": 0,
+            "stumpings": 0
+          },
+          {
+            "fielder": "Kurt DSouza",
+            "dismissals": 4,
+            "catches": 3,
+            "run_outs": 1,
+            "stumpings": 0
+          },
+          {
+            "fielder": "Siddhesh Mervekar",
+            "dismissals": 4,
+            "catches": 3,
+            "run_outs": 1,
+            "stumpings": 0
+          },
+          {
+            "fielder": "Utkarsh Bhatt",
+            "dismissals": 4,
+            "catches": 3,
+            "run_outs": 1,
+            "stumpings": 0
+          },
+          {
+            "fielder": "Nazroon Najumudeen",
+            "dismissals": 3,
+            "catches": 3,
+            "run_outs": 0,
+            "stumpings": 0
+          }
+        ],
+        "best_match_fielding": [
+          {
+            "fielder": "Matthew Keating",
+            "file": "Scorecard_19424338.pdf",
+            "dismissals": 6
+          },
+          {
+            "fielder": "Matthew Keating",
+            "file": "Scorecard_16267322.pdf",
+            "dismissals": 4
+          },
+          {
+            "fielder": "Matthew Keating",
+            "file": "Scorecard_18802629.pdf",
+            "dismissals": 4
+          },
+          {
+            "fielder": "Matthew Keating",
+            "file": "Scorecard_19433279.pdf",
+            "dismissals": 3
+          },
+          {
+            "fielder": "Matthew Keating",
+            "file": "Scorecard_16267205.pdf",
+            "dismissals": 2
+          },
+          {
+            "fielder": "Matthew Keating",
+            "file": "Scorecard_16267209.pdf",
+            "dismissals": 2
+          },
+          {
+            "fielder": "Matthew Keating",
+            "file": "Scorecard_16267211.pdf",
+            "dismissals": 2
+          },
+          {
+            "fielder": "Matthew Keating",
+            "file": "Scorecard_17030743.pdf",
+            "dismissals": 2
+          },
+          {
+            "fielder": "Matthew Keating",
+            "file": "Scorecard_17501469.pdf",
+            "dismissals": 2
+          },
+          {
+            "fielder": "Neel",
+            "file": "Scorecard_19424338.pdf",
+            "dismissals": 2
+          }
+        ]
+      }
+    }
   },
   "2026": {
-    "last_updated": "2026-05-26T14:47:50.248423",
+    "last_updated": "2026-05-26T15:00:51.201714",
     "summary": {
       "total_matches": 3,
       "total_innings": 27,
@@ -1264,6 +2140,759 @@
         ]
       }
     },
-    "bowling": {}
+    "bowling": {
+      "season_stats": [
+        {
+          "bowler": "Aromal Das",
+          "wickets": 1,
+          "runs": 13,
+          "balls": 12,
+          "overs": 2.0,
+          "maidens": 0,
+          "economy": 6.5,
+          "file": 1,
+          "average": 13.0,
+          "strike_rate": 12.0
+        },
+        {
+          "bowler": "Jakub Blazejczyk",
+          "wickets": 1,
+          "runs": 44,
+          "balls": 36,
+          "overs": 6.0,
+          "maidens": 0,
+          "economy": 7.88,
+          "file": 2,
+          "average": 44.0,
+          "strike_rate": 36.0
+        },
+        {
+          "bowler": "Kurt DSouza",
+          "wickets": 5,
+          "runs": 65,
+          "balls": 71,
+          "overs": 11.5,
+          "maidens": 0,
+          "economy": 6.1,
+          "file": 3,
+          "average": 13.0,
+          "strike_rate": 14.2
+        },
+        {
+          "bowler": "Nazroon Najumudeen",
+          "wickets": 1,
+          "runs": 20,
+          "balls": 18,
+          "overs": 3.0,
+          "maidens": 0,
+          "economy": 6.67,
+          "file": 1,
+          "average": 20.0,
+          "strike_rate": 18.0
+        },
+        {
+          "bowler": "Neel",
+          "wickets": 4,
+          "runs": 78,
+          "balls": 72,
+          "overs": 12.0,
+          "maidens": 0,
+          "economy": 6.84,
+          "file": 3,
+          "average": 19.5,
+          "strike_rate": 18.0
+        },
+        {
+          "bowler": "Sameer Gaur",
+          "wickets": 4,
+          "runs": 81,
+          "balls": 90,
+          "overs": 15.0,
+          "maidens": 0,
+          "economy": 5.61,
+          "file": 3,
+          "average": 20.25,
+          "strike_rate": 22.5
+        },
+        {
+          "bowler": "Shashikanth Acharya",
+          "wickets": 2,
+          "runs": 21,
+          "balls": 18,
+          "overs": 3.0,
+          "maidens": 0,
+          "economy": 7.0,
+          "file": 1,
+          "average": 10.5,
+          "strike_rate": 9.0
+        },
+        {
+          "bowler": "Shelako Almeida",
+          "wickets": 1,
+          "runs": 21,
+          "balls": 18,
+          "overs": 3.0,
+          "maidens": 0,
+          "economy": 7.0,
+          "file": 1,
+          "average": 21.0,
+          "strike_rate": 18.0
+        },
+        {
+          "bowler": "Siddhesh Mervekar",
+          "wickets": 0,
+          "runs": 9,
+          "balls": 12,
+          "overs": 2.0,
+          "maidens": 0,
+          "economy": 4.5,
+          "file": 1,
+          "average": 0.0,
+          "strike_rate": 0.0
+        },
+        {
+          "bowler": "Syed Adil",
+          "wickets": 0,
+          "runs": 24,
+          "balls": 12,
+          "overs": 2.0,
+          "maidens": 0,
+          "economy": 12.0,
+          "file": 1,
+          "average": 0.0,
+          "strike_rate": 0.0
+        },
+        {
+          "bowler": "Utkarsh Bhatt",
+          "wickets": 2,
+          "runs": 29,
+          "balls": 24,
+          "overs": 4.0,
+          "maidens": 0,
+          "economy": 7.25,
+          "file": 1,
+          "average": 14.5,
+          "strike_rate": 12.0
+        },
+        {
+          "bowler": "Vishal Patil",
+          "wickets": 0,
+          "runs": 14,
+          "balls": 6,
+          "overs": 1.0,
+          "maidens": 0,
+          "economy": 14.0,
+          "file": 1,
+          "average": 0.0,
+          "strike_rate": 0.0
+        },
+        {
+          "bowler": "Wilfred R",
+          "wickets": 1,
+          "runs": 58,
+          "balls": 36,
+          "overs": 6.0,
+          "maidens": 0,
+          "economy": 10.62,
+          "file": 2,
+          "average": 58.0,
+          "strike_rate": 36.0
+        }
+      ],
+      "leaderboards": {
+        "top_wicket_takers": [
+          {
+            "bowler": "Kurt DSouza",
+            "wickets": 5,
+            "average": 13.0,
+            "economy": 6.1
+          },
+          {
+            "bowler": "Neel",
+            "wickets": 4,
+            "average": 19.5,
+            "economy": 6.84
+          },
+          {
+            "bowler": "Sameer Gaur",
+            "wickets": 4,
+            "average": 20.25,
+            "economy": 5.61
+          },
+          {
+            "bowler": "Shashikanth Acharya",
+            "wickets": 2,
+            "average": 10.5,
+            "economy": 7.0
+          },
+          {
+            "bowler": "Utkarsh Bhatt",
+            "wickets": 2,
+            "average": 14.5,
+            "economy": 7.25
+          },
+          {
+            "bowler": "Aromal Das",
+            "wickets": 1,
+            "average": 13.0,
+            "economy": 6.5
+          },
+          {
+            "bowler": "Jakub Blazejczyk",
+            "wickets": 1,
+            "average": 44.0,
+            "economy": 7.88
+          },
+          {
+            "bowler": "Nazroon Najumudeen",
+            "wickets": 1,
+            "average": 20.0,
+            "economy": 6.67
+          },
+          {
+            "bowler": "Shelako Almeida",
+            "wickets": 1,
+            "average": 21.0,
+            "economy": 7.0
+          },
+          {
+            "bowler": "Wilfred R",
+            "wickets": 1,
+            "average": 58.0,
+            "economy": 10.62
+          }
+        ],
+        "best_figures": [
+          {
+            "bowler": "Sameer Gaur",
+            "wickets": 3,
+            "runs": 32,
+            "overs": 7.0
+          },
+          {
+            "bowler": "Kurt DSouza",
+            "wickets": 3,
+            "runs": 12,
+            "overs": 4.5
+          },
+          {
+            "bowler": "Utkarsh Bhatt",
+            "wickets": 2,
+            "runs": 29,
+            "overs": 4.0
+          },
+          {
+            "bowler": "Shashikanth Acharya",
+            "wickets": 2,
+            "runs": 21,
+            "overs": 3.0
+          },
+          {
+            "bowler": "Neel",
+            "wickets": 2,
+            "runs": 40,
+            "overs": 4.0
+          },
+          {
+            "bowler": "Neel",
+            "wickets": 1,
+            "runs": 22,
+            "overs": 3.0
+          },
+          {
+            "bowler": "Kurt DSouza",
+            "wickets": 1,
+            "runs": 22,
+            "overs": 4.0
+          },
+          {
+            "bowler": "Sameer Gaur",
+            "wickets": 1,
+            "runs": 23,
+            "overs": 4.0
+          },
+          {
+            "bowler": "Aromal Das",
+            "wickets": 1,
+            "runs": 13,
+            "overs": 2.0
+          },
+          {
+            "bowler": "Wilfred R",
+            "wickets": 1,
+            "runs": 31,
+            "overs": 4.0
+          }
+        ],
+        "best_economy": [
+          {
+            "bowler": "Siddhesh Mervekar",
+            "economy": 4.5,
+            "overs": 2.0,
+            "wickets": 0
+          },
+          {
+            "bowler": "Sameer Gaur",
+            "economy": 5.61,
+            "overs": 15.0,
+            "wickets": 4
+          },
+          {
+            "bowler": "Kurt DSouza",
+            "economy": 6.1,
+            "overs": 11.5,
+            "wickets": 5
+          },
+          {
+            "bowler": "Aromal Das",
+            "economy": 6.5,
+            "overs": 2.0,
+            "wickets": 1
+          },
+          {
+            "bowler": "Nazroon Najumudeen",
+            "economy": 6.67,
+            "overs": 3.0,
+            "wickets": 1
+          },
+          {
+            "bowler": "Neel",
+            "economy": 6.84,
+            "overs": 12.0,
+            "wickets": 4
+          },
+          {
+            "bowler": "Shashikanth Acharya",
+            "economy": 7.0,
+            "overs": 3.0,
+            "wickets": 2
+          },
+          {
+            "bowler": "Shelako Almeida",
+            "economy": 7.0,
+            "overs": 3.0,
+            "wickets": 1
+          },
+          {
+            "bowler": "Utkarsh Bhatt",
+            "economy": 7.25,
+            "overs": 4.0,
+            "wickets": 2
+          },
+          {
+            "bowler": "Jakub Blazejczyk",
+            "economy": 7.88,
+            "overs": 6.0,
+            "wickets": 1
+          }
+        ]
+      }
+    },
+    "fielding": {
+      "season_stats": [
+        {
+          "fielder": "Ashwini Rajput",
+          "catches": 2,
+          "run_outs": 0,
+          "stumpings": 0,
+          "direct_hits": 2,
+          "matches": 2,
+          "dismissals": 2
+        },
+        {
+          "fielder": "Jakub Blazejczyk",
+          "catches": 1,
+          "run_outs": 0,
+          "stumpings": 0,
+          "direct_hits": 1,
+          "matches": 1,
+          "dismissals": 1
+        },
+        {
+          "fielder": "Kurt DSouza",
+          "catches": 1,
+          "run_outs": 0,
+          "stumpings": 0,
+          "direct_hits": 1,
+          "matches": 1,
+          "dismissals": 1
+        },
+        {
+          "fielder": "Matthew Keating",
+          "catches": 1,
+          "run_outs": 0,
+          "stumpings": 1,
+          "direct_hits": 2,
+          "matches": 2,
+          "dismissals": 2
+        },
+        {
+          "fielder": "Michal OstykNarbutt",
+          "catches": 1,
+          "run_outs": 0,
+          "stumpings": 0,
+          "direct_hits": 1,
+          "matches": 1,
+          "dismissals": 1
+        },
+        {
+          "fielder": "Nazroon Najumudeen",
+          "catches": 1,
+          "run_outs": 0,
+          "stumpings": 0,
+          "direct_hits": 1,
+          "matches": 1,
+          "dismissals": 1
+        },
+        {
+          "fielder": "Sameer Gaur",
+          "catches": 2,
+          "run_outs": 1,
+          "stumpings": 0,
+          "direct_hits": 3,
+          "matches": 3,
+          "dismissals": 3
+        },
+        {
+          "fielder": "Sanjay Pawar",
+          "catches": 1,
+          "run_outs": 0,
+          "stumpings": 0,
+          "direct_hits": 1,
+          "matches": 1,
+          "dismissals": 1
+        },
+        {
+          "fielder": "Siddhesh Mervekar",
+          "catches": 4,
+          "run_outs": 0,
+          "stumpings": 0,
+          "direct_hits": 4,
+          "matches": 2,
+          "dismissals": 4
+        },
+        {
+          "fielder": "Utkarsh Bhatt",
+          "catches": 1,
+          "run_outs": 0,
+          "stumpings": 0,
+          "direct_hits": 1,
+          "matches": 1,
+          "dismissals": 1
+        }
+      ],
+      "leaderboards": {
+        "most_catches": [
+          {
+            "fielder": "Siddhesh Mervekar",
+            "catches": 4,
+            "dismissals": 4,
+            "matches": 2
+          },
+          {
+            "fielder": "Ashwini Rajput",
+            "catches": 2,
+            "dismissals": 2,
+            "matches": 2
+          },
+          {
+            "fielder": "Sameer Gaur",
+            "catches": 2,
+            "dismissals": 3,
+            "matches": 3
+          },
+          {
+            "fielder": "Jakub Blazejczyk",
+            "catches": 1,
+            "dismissals": 1,
+            "matches": 1
+          },
+          {
+            "fielder": "Kurt DSouza",
+            "catches": 1,
+            "dismissals": 1,
+            "matches": 1
+          },
+          {
+            "fielder": "Matthew Keating",
+            "catches": 1,
+            "dismissals": 2,
+            "matches": 2
+          },
+          {
+            "fielder": "Michal OstykNarbutt",
+            "catches": 1,
+            "dismissals": 1,
+            "matches": 1
+          },
+          {
+            "fielder": "Nazroon Najumudeen",
+            "catches": 1,
+            "dismissals": 1,
+            "matches": 1
+          },
+          {
+            "fielder": "Sanjay Pawar",
+            "catches": 1,
+            "dismissals": 1,
+            "matches": 1
+          },
+          {
+            "fielder": "Utkarsh Bhatt",
+            "catches": 1,
+            "dismissals": 1,
+            "matches": 1
+          }
+        ],
+        "most_run_outs": [
+          {
+            "fielder": "Sameer Gaur",
+            "run_outs": 1,
+            "direct_hits": 3,
+            "matches": 3
+          },
+          {
+            "fielder": "Ashwini Rajput",
+            "run_outs": 0,
+            "direct_hits": 2,
+            "matches": 2
+          },
+          {
+            "fielder": "Jakub Blazejczyk",
+            "run_outs": 0,
+            "direct_hits": 1,
+            "matches": 1
+          },
+          {
+            "fielder": "Kurt DSouza",
+            "run_outs": 0,
+            "direct_hits": 1,
+            "matches": 1
+          },
+          {
+            "fielder": "Matthew Keating",
+            "run_outs": 0,
+            "direct_hits": 2,
+            "matches": 2
+          },
+          {
+            "fielder": "Michal OstykNarbutt",
+            "run_outs": 0,
+            "direct_hits": 1,
+            "matches": 1
+          },
+          {
+            "fielder": "Nazroon Najumudeen",
+            "run_outs": 0,
+            "direct_hits": 1,
+            "matches": 1
+          },
+          {
+            "fielder": "Sanjay Pawar",
+            "run_outs": 0,
+            "direct_hits": 1,
+            "matches": 1
+          },
+          {
+            "fielder": "Siddhesh Mervekar",
+            "run_outs": 0,
+            "direct_hits": 4,
+            "matches": 2
+          },
+          {
+            "fielder": "Utkarsh Bhatt",
+            "run_outs": 0,
+            "direct_hits": 1,
+            "matches": 1
+          }
+        ],
+        "most_stumpings": [
+          {
+            "fielder": "Matthew Keating",
+            "stumpings": 1,
+            "dismissals": 2,
+            "matches": 2
+          },
+          {
+            "fielder": "Ashwini Rajput",
+            "stumpings": 0,
+            "dismissals": 2,
+            "matches": 2
+          },
+          {
+            "fielder": "Jakub Blazejczyk",
+            "stumpings": 0,
+            "dismissals": 1,
+            "matches": 1
+          },
+          {
+            "fielder": "Kurt DSouza",
+            "stumpings": 0,
+            "dismissals": 1,
+            "matches": 1
+          },
+          {
+            "fielder": "Michal OstykNarbutt",
+            "stumpings": 0,
+            "dismissals": 1,
+            "matches": 1
+          },
+          {
+            "fielder": "Nazroon Najumudeen",
+            "stumpings": 0,
+            "dismissals": 1,
+            "matches": 1
+          },
+          {
+            "fielder": "Sameer Gaur",
+            "stumpings": 0,
+            "dismissals": 3,
+            "matches": 3
+          },
+          {
+            "fielder": "Sanjay Pawar",
+            "stumpings": 0,
+            "dismissals": 1,
+            "matches": 1
+          },
+          {
+            "fielder": "Siddhesh Mervekar",
+            "stumpings": 0,
+            "dismissals": 4,
+            "matches": 2
+          },
+          {
+            "fielder": "Utkarsh Bhatt",
+            "stumpings": 0,
+            "dismissals": 1,
+            "matches": 1
+          }
+        ],
+        "most_dismissals": [
+          {
+            "fielder": "Siddhesh Mervekar",
+            "dismissals": 4,
+            "catches": 4,
+            "run_outs": 0,
+            "stumpings": 0
+          },
+          {
+            "fielder": "Sameer Gaur",
+            "dismissals": 3,
+            "catches": 2,
+            "run_outs": 1,
+            "stumpings": 0
+          },
+          {
+            "fielder": "Ashwini Rajput",
+            "dismissals": 2,
+            "catches": 2,
+            "run_outs": 0,
+            "stumpings": 0
+          },
+          {
+            "fielder": "Matthew Keating",
+            "dismissals": 2,
+            "catches": 1,
+            "run_outs": 0,
+            "stumpings": 1
+          },
+          {
+            "fielder": "Jakub Blazejczyk",
+            "dismissals": 1,
+            "catches": 1,
+            "run_outs": 0,
+            "stumpings": 0
+          },
+          {
+            "fielder": "Kurt DSouza",
+            "dismissals": 1,
+            "catches": 1,
+            "run_outs": 0,
+            "stumpings": 0
+          },
+          {
+            "fielder": "Michal OstykNarbutt",
+            "dismissals": 1,
+            "catches": 1,
+            "run_outs": 0,
+            "stumpings": 0
+          },
+          {
+            "fielder": "Nazroon Najumudeen",
+            "dismissals": 1,
+            "catches": 1,
+            "run_outs": 0,
+            "stumpings": 0
+          },
+          {
+            "fielder": "Sanjay Pawar",
+            "dismissals": 1,
+            "catches": 1,
+            "run_outs": 0,
+            "stumpings": 0
+          },
+          {
+            "fielder": "Utkarsh Bhatt",
+            "dismissals": 1,
+            "catches": 1,
+            "run_outs": 0,
+            "stumpings": 0
+          }
+        ],
+        "best_match_fielding": [
+          {
+            "fielder": "Siddhesh Mervekar",
+            "file": "Scorecard_23436445.pdf",
+            "dismissals": 2
+          },
+          {
+            "fielder": "Siddhesh Mervekar",
+            "file": "Scorecard_24527779.pdf",
+            "dismissals": 2
+          },
+          {
+            "fielder": "Ashwini Rajput",
+            "file": "Scorecard_23436445.pdf",
+            "dismissals": 1
+          },
+          {
+            "fielder": "Ashwini Rajput",
+            "file": "Scorecard_23436447.pdf",
+            "dismissals": 1
+          },
+          {
+            "fielder": "Jakub Blazejczyk",
+            "file": "Scorecard_24527779.pdf",
+            "dismissals": 1
+          },
+          {
+            "fielder": "Kurt DSouza",
+            "file": "Scorecard_23436445.pdf",
+            "dismissals": 1
+          },
+          {
+            "fielder": "Matthew Keating",
+            "file": "Scorecard_23436447.pdf",
+            "dismissals": 1
+          },
+          {
+            "fielder": "Matthew Keating",
+            "file": "Scorecard_24527779.pdf",
+            "dismissals": 1
+          },
+          {
+            "fielder": "Michal OstykNarbutt",
+            "file": "Scorecard_23436445.pdf",
+            "dismissals": 1
+          },
+          {
+            "fielder": "Nazroon Najumudeen",
+            "file": "Scorecard_24527779.pdf",
+            "dismissals": 1
+          }
+        ]
+      }
+    }
   }
 }
