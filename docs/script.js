@@ -323,8 +323,22 @@ function displayLeaderboard(tableId, data, columns) {
         return;
     }
 
+    window._leaderboardState = window._leaderboardState || {};
+    // Preserve showAll across year changes; reset only on first load of this table
+    const prev = window._leaderboardState[tableId];
+    window._leaderboardState[tableId] = { data, columns, tbody, showAll: prev ? prev.showAll : false };
+    renderLeaderboard(tableId);
+}
+
+function renderLeaderboard(tableId) {
+    const state = window._leaderboardState && window._leaderboardState[tableId];
+    if (!state) return;
+    const { data, columns, tbody, showAll } = state;
+    const DEFAULT_ROWS = 10;
+
     tbody.innerHTML = '';
-    data.forEach((row, index) => {
+    const visible = showAll ? data : data.slice(0, DEFAULT_ROWS);
+    visible.forEach((row, index) => {
         const tr = document.createElement('tr');
         tr.innerHTML = `
             <td>${index + 1}</td>
@@ -332,6 +346,26 @@ function displayLeaderboard(tableId, data, columns) {
         `;
         tbody.appendChild(tr);
     });
+
+    if (data.length > DEFAULT_ROWS) {
+        const toggleRow = document.createElement('tr');
+        toggleRow.innerHTML = `
+            <td colspan="${columns.length + 1}" style="text-align:center; padding: 10px;">
+                <button onclick="toggleLeaderboard('${tableId}')"
+                    style="background:none; border:1px solid #667eea; color:#667eea;
+                           padding:5px 16px; border-radius:6px; cursor:pointer; font-size:0.9em;">
+                    ${showAll ? '&#9650; Show top 10' : '&#9660; Show all ' + data.length}
+                </button>
+            </td>`;
+        tbody.appendChild(toggleRow);
+    }
+}
+
+function toggleLeaderboard(tableId) {
+    const state = window._leaderboardState && window._leaderboardState[tableId];
+    if (!state) return;
+    state.showAll = !state.showAll;
+    renderLeaderboard(tableId);
 }
 
 function displayAllPlayers(players) {
