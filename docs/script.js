@@ -115,6 +115,10 @@ function displayStats(year) {
             ['batsman', 'fours', 'runs', 'innings']);
         displayLeaderboard('mostSixes', statsData.batting.leaderboards.most_sixes,
             ['batsman', 'sixes', 'runs', 'innings']);
+        displayLeaderboard('mostDucks', statsData.batting.leaderboards.most_ducks,
+            ['batsman', 'ducks', 'innings']);
+        displayLeaderboard('mostDucksPerInnings', statsData.batting.leaderboards.most_ducks_per_innings,
+            ['batsman', 'ducks_per_innings', 'ducks', 'innings']);
 
         displayAllPlayers(statsData.batting.season_stats);
         initializePlayerInningsExplorer(statsData.batting);
@@ -306,7 +310,8 @@ function showNoDataMessage(year) {
 
 function clearLeaderboards() {
     const tables = ['topRunScorers', 'highestScores', 'bestAverages', 'bestStrikeRates',
-                    'mostFours', 'mostSixes', 'topWicketTakers', 'bestFigures', 'bestEconomy',
+                    'mostFours', 'mostSixes', 'mostDucks', 'mostDucksPerInnings',
+                    'topWicketTakers', 'bestFigures', 'bestEconomy',
                     'mostCatches', 'mostRunOuts', 'mostStumpings', 'mostDismissalsFielding'];
     tables.forEach(tableId => {
         const tbody = document.querySelector(`#${tableId} tbody`);
@@ -401,7 +406,7 @@ function formatValue(val, columnName) {
     if (typeof val === 'number') {
         if (isNaN(val)) return '-';
 
-        const integerFields = ['runs', 'innings', 'balls', 'fours', 'sixes', 'wickets', 'overs', 'maidens'];
+        const integerFields = ['runs', 'innings', 'balls', 'fours', 'sixes', 'wickets', 'overs', 'maidens', 'ducks'];
         if (columnName && integerFields.includes(columnName)) {
             return Math.round(val).toString();
         }
