@@ -119,6 +119,10 @@ function displayStats(year) {
             ['batsman', 'fours', 'runs', 'innings']);
         displayLeaderboard('mostSixes', statsData.batting.leaderboards.most_sixes, 
             ['batsman', 'sixes', 'runs', 'innings']);
+        displayLeaderboard('mostDucks', statsData.batting.leaderboards.most_ducks, 
+            ['batsman', 'is_duck', 'innings', 'ducks_per_innings']);
+        displayLeaderboard('mostDucksPerInnings', statsData.batting.leaderboards.most_ducks_per_innings, 
+            ['batsman', 'ducks_per_innings', 'is_duck', 'innings']);
         
         // Display all players
         displayAllPlayers(statsData.batting.season_stats);
@@ -294,6 +298,7 @@ function displayAllPlayers(players) {
             <td>${formatValue(player.fours, 'fours')}</td>
             <td>${formatValue(player.sixes, 'sixes')}</td>
             <td>${formatValue(player.is_duck, 'innings')}</td>
+            <td>${formatValue(player.ducks_per_innings, 'sr')}</td>
         `;
         tbody.appendChild(tr);
     });
@@ -305,7 +310,7 @@ function formatValue(val, columnName) {
         if (isNaN(val)) return '-';
         
         // Integer fields - no decimal places
-        const integerFields = ['runs', 'innings', 'balls', 'fours', 'sixes', 'wickets', 'overs', 'maidens'];
+        const integerFields = ['runs', 'innings', 'balls', 'fours', 'sixes', 'wickets', 'overs', 'maidens', 'is_duck'];
         if (columnName && integerFields.includes(columnName)) {
             return Math.round(val).toString();
         }

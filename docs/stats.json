@@ -1,6 +1,6 @@
 {
   "2024": {
-    "last_updated": "2026-06-29T00:03:17.856960",
+    "last_updated": "2026-06-29T00:08:25.455447",
     "summary": {
       "total_matches": 20,
       "total_innings": 155,
@@ -24,7 +24,8 @@
           "file": 6,
           "sr": 66.67,
           "average": 4.0,
-          "innings": 6
+          "innings": 6,
+          "ducks_per_innings": 0.17
         },
         {
           "batsman": "Brian Paszkowiak",
@@ -37,7 +38,8 @@
           "file": 5,
           "sr": 92.71,
           "average": 22.25,
-          "innings": 5
+          "innings": 5,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Divakar Bojan",
@@ -50,7 +52,8 @@
           "file": 1,
           "sr": 0.0,
           "average": 0.0,
-          "innings": 1
+          "innings": 1,
+          "ducks_per_innings": 1.0
         },
         {
           "batsman": "Harshit Kumar Singh",
@@ -63,7 +66,8 @@
           "file": 1,
           "sr": 0.0,
           "average": 0.0,
-          "innings": 1
+          "innings": 1,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Hashim Rahman",
@@ -76,7 +80,8 @@
           "file": 4,
           "sr": 77.78,
           "average": 5.25,
-          "innings": 4
+          "innings": 4,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Jakub Blazejczyk",
@@ -89,7 +94,8 @@
           "file": 4,
           "sr": 15.38,
           "average": 1.0,
-          "innings": 4
+          "innings": 4,
+          "ducks_per_innings": 0.25
         },
         {
           "batsman": "Jan Almeida",
@@ -102,7 +108,8 @@
           "file": 1,
           "sr": 0.0,
           "average": 0.0,
-          "innings": 1
+          "innings": 1,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Jayaram Ganapathy",
@@ -115,7 +122,8 @@
           "file": 1,
           "sr": 0.0,
           "average": 0.0,
-          "innings": 1
+          "innings": 1,
+          "ducks_per_innings": 1.0
         },
         {
           "batsman": "Keith Dsouza",
@@ -128,7 +136,8 @@
           "file": 2,
           "sr": 36.36,
           "average": 4.0,
-          "innings": 2
+          "innings": 2,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Kurt DSouza",
@@ -141,7 +150,8 @@
           "file": 14,
           "sr": 75.89,
           "average": 16.0,
-          "innings": 14
+          "innings": 14,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Kurt Dsousa",
@@ -154,7 +164,8 @@
           "file": 1,
           "sr": 66.67,
           "average": 2.0,
-          "innings": 1
+          "innings": 1,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Matthew Kearting",
@@ -167,7 +178,8 @@
           "file": 1,
           "sr": 75.0,
           "average": 3.0,
-          "innings": 1
+          "innings": 1,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Matthew Keating",
@@ -180,7 +192,8 @@
           "file": 16,
           "sr": 84.31,
           "average": 31.0,
-          "innings": 16
+          "innings": 16,
+          "ducks_per_innings": 0.06
         },
         {
           "batsman": "Michal OstykNarbutt",
@@ -193,7 +206,8 @@
           "file": 10,
           "sr": 107.43,
           "average": 26.5,
-          "innings": 10
+          "innings": 10,
+          "ducks_per_innings": 0.1
         },
         {
           "batsman": "Nazroon Najumudeen",
@@ -206,7 +220,8 @@
           "file": 11,
           "sr": 48.54,
           "average": 8.3,
-          "innings": 11
+          "innings": 11,
+          "ducks_per_innings": 0.27
         },
         {
           "batsman": "Piotr Sochaj",
@@ -219,7 +234,8 @@
           "file": 10,
           "sr": 69.53,
           "average": 11.12,
-          "innings": 10
+          "innings": 10,
+          "ducks_per_innings": 0.1
         },
         {
           "batsman": "Sameer Gaur",
@@ -232,7 +248,8 @@
           "file": 9,
           "sr": 38.96,
           "average": 3.33,
-          "innings": 9
+          "innings": 9,
+          "ducks_per_innings": 0.33
         },
         {
           "batsman": "Shankar",
@@ -245,7 +262,8 @@
           "file": 1,
           "sr": 100.0,
           "average": 2.0,
-          "innings": 1
+          "innings": 1,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Shankar Kartha",
@@ -258,7 +276,8 @@
           "file": 13,
           "sr": 115.84,
           "average": 26.0,
-          "innings": 13
+          "innings": 13,
+          "ducks_per_innings": 0.23
         },
         {
           "batsman": "Shelako Almeida",
@@ -271,7 +290,8 @@
           "file": 4,
           "sr": 44.83,
           "average": 3.25,
-          "innings": 4
+          "innings": 4,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Utkarsh Bhatt",
@@ -284,7 +304,8 @@
           "file": 19,
           "sr": 123.86,
           "average": 27.25,
-          "innings": 19
+          "innings": 19,
+          "ducks_per_innings": 0.05
         },
         {
           "batsman": "Vatsal Verma",
@@ -297,7 +318,8 @@
           "file": 4,
           "sr": 59.02,
           "average": 36.0,
-          "innings": 4
+          "innings": 4,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Vivek Kadal",
@@ -310,7 +332,8 @@
           "file": 15,
           "sr": 85.78,
           "average": 12.47,
-          "innings": 15
+          "innings": 15,
+          "ducks_per_innings": 0.13
         },
         {
           "batsman": "Wilfred R",
@@ -323,7 +346,8 @@
           "file": 2,
           "sr": 70.0,
           "average": 7.0,
-          "innings": 2
+          "innings": 2,
+          "ducks_per_innings": 0.0
         }
       ],
       "innings_records": [
@@ -2570,6 +2594,130 @@
             "runs": 0,
             "innings": 1
           }
+        ],
+        "most_ducks": [
+          {
+            "batsman": "Nazroon Najumudeen",
+            "is_duck": 3,
+            "innings": 11,
+            "ducks_per_innings": 0.27
+          },
+          {
+            "batsman": "Sameer Gaur",
+            "is_duck": 3,
+            "innings": 9,
+            "ducks_per_innings": 0.33
+          },
+          {
+            "batsman": "Shankar Kartha",
+            "is_duck": 3,
+            "innings": 13,
+            "ducks_per_innings": 0.23
+          },
+          {
+            "batsman": "Vivek Kadal",
+            "is_duck": 2,
+            "innings": 15,
+            "ducks_per_innings": 0.13
+          },
+          {
+            "batsman": "Ashwini Rajput",
+            "is_duck": 1,
+            "innings": 6,
+            "ducks_per_innings": 0.17
+          },
+          {
+            "batsman": "Divakar Bojan",
+            "is_duck": 1,
+            "innings": 1,
+            "ducks_per_innings": 1.0
+          },
+          {
+            "batsman": "Jakub Blazejczyk",
+            "is_duck": 1,
+            "innings": 4,
+            "ducks_per_innings": 0.25
+          },
+          {
+            "batsman": "Jayaram Ganapathy",
+            "is_duck": 1,
+            "innings": 1,
+            "ducks_per_innings": 1.0
+          },
+          {
+            "batsman": "Matthew Keating",
+            "is_duck": 1,
+            "innings": 16,
+            "ducks_per_innings": 0.06
+          },
+          {
+            "batsman": "Michal OstykNarbutt",
+            "is_duck": 1,
+            "innings": 10,
+            "ducks_per_innings": 0.1
+          }
+        ],
+        "most_ducks_per_innings": [
+          {
+            "batsman": "Divakar Bojan",
+            "ducks_per_innings": 1.0,
+            "is_duck": 1,
+            "innings": 1
+          },
+          {
+            "batsman": "Jayaram Ganapathy",
+            "ducks_per_innings": 1.0,
+            "is_duck": 1,
+            "innings": 1
+          },
+          {
+            "batsman": "Sameer Gaur",
+            "ducks_per_innings": 0.33,
+            "is_duck": 3,
+            "innings": 9
+          },
+          {
+            "batsman": "Nazroon Najumudeen",
+            "ducks_per_innings": 0.27,
+            "is_duck": 3,
+            "innings": 11
+          },
+          {
+            "batsman": "Jakub Blazejczyk",
+            "ducks_per_innings": 0.25,
+            "is_duck": 1,
+            "innings": 4
+          },
+          {
+            "batsman": "Shankar Kartha",
+            "ducks_per_innings": 0.23,
+            "is_duck": 3,
+            "innings": 13
+          },
+          {
+            "batsman": "Ashwini Rajput",
+            "ducks_per_innings": 0.17,
+            "is_duck": 1,
+            "innings": 6
+          },
+          {
+            "batsman": "Vivek Kadal",
+            "ducks_per_innings": 0.13,
+            "is_duck": 2,
+            "innings": 15
+          },
+          {
+            "batsman": "Michal OstykNarbutt",
+            "ducks_per_innings": 0.1,
+            "is_duck": 1,
+            "innings": 10
+          },
+          {
+            "batsman": "Piotr Sochaj",
+            "ducks_per_innings": 0.1,
+            "is_duck": 1,
+            "innings": 10
+          }
         ]
       }
     },
@@ -3416,7 +3564,7 @@
     }
   },
   "2025": {
-    "last_updated": "2026-06-29T00:03:17.915099",
+    "last_updated": "2026-06-29T00:08:25.542431",
     "summary": {
       "total_matches": 19,
       "total_innings": 185,
@@ -3440,7 +3588,8 @@
           "file": 2,
           "sr": 16.67,
           "average": 0.5,
-          "innings": 2
+          "innings": 2,
+          "ducks_per_innings": 0.5
         },
         {
           "batsman": "Brian Paszkowiak",
@@ -3453,7 +3602,8 @@
           "file": 1,
           "sr": 0.0,
           "average": 0.0,
-          "innings": 1
+          "innings": 1,
+          "ducks_per_innings": 1.0
         },
         {
           "batsman": "Figo",
@@ -3466,7 +3616,8 @@
           "file": 9,
           "sr": 102.27,
           "average": 18.0,
-          "innings": 9
+          "innings": 9,
+          "ducks_per_innings": 0.11
         },
         {
           "batsman": "Harshit Kumar Singh",
@@ -3479,7 +3630,8 @@
           "file": 3,
           "sr": 93.33,
           "average": 7.0,
-          "innings": 3
+          "innings": 3,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Hashim Rahman",
@@ -3492,7 +3644,8 @@
           "file": 6,
           "sr": 32.26,
           "average": 3.33,
-          "innings": 6
+          "innings": 6,
+          "ducks_per_innings": 0.17
         },
         {
           "batsman": "Jakub Blazejczyk",
@@ -3505,7 +3658,8 @@
           "file": 7,
           "sr": 32.43,
           "average": 4.0,
-          "innings": 7
+          "innings": 7,
+          "ducks_per_innings": 0.29
         },
         {
           "batsman": "Jakub Zagozdzon",
@@ -3518,7 +3672,8 @@
           "file": 1,
           "sr": 240.0,
           "average": 12.0,
-          "innings": 1
+          "innings": 1,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Jerzy Suchodolski",
@@ -3531,7 +3686,8 @@
           "file": 1,
           "sr": 200.0,
           "average": 2.0,
-          "innings": 1
+          "innings": 1,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Konrad Kachel",
@@ -3544,7 +3700,8 @@
           "file": 2,
           "sr": 25.0,
           "average": 0.5,
-          "innings": 2
+          "innings": 2,
+          "ducks_per_innings": 0.5
         },
         {
           "batsman": "Kurt DSouza",
@@ -3557,7 +3714,8 @@
           "file": 10,
           "sr": 85.29,
           "average": 14.5,
-          "innings": 10
+          "innings": 10,
+          "ducks_per_innings": 0.2
         },
         {
           "batsman": "Matthew Keating",
@@ -3570,7 +3728,8 @@
           "file": 17,
           "sr": 75.36,
           "average": 17.33,
-          "innings": 17
+          "innings": 17,
+          "ducks_per_innings": 0.18
         },
         {
           "batsman": "Michal OstykNarbutt",
@@ -3583,7 +3742,8 @@
           "file": 16,
           "sr": 82.58,
           "average": 10.5,
-          "innings": 16
+          "innings": 16,
+          "ducks_per_innings": 0.25
         },
         {
           "batsman": "Nazroon Najumudeen",
@@ -3596,7 +3756,8 @@
           "file": 14,
           "sr": 70.56,
           "average": 9.77,
-          "innings": 14
+          "innings": 14,
+          "ducks_per_innings": 0.14
         },
         {
           "batsman": "Neel",
@@ -3609,7 +3770,8 @@
           "file": 18,
           "sr": 108.88,
           "average": 17.42,
-          "innings": 18
+          "innings": 18,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Piotr Sochaj",
@@ -3622,7 +3784,8 @@
           "file": 1,
           "sr": 0.0,
           "average": 0.0,
-          "innings": 1
+          "innings": 1,
+          "ducks_per_innings": 1.0
         },
         {
           "batsman": "Prabhat Singh Gusain",
@@ -3635,7 +3798,8 @@
           "file": 3,
           "sr": 102.94,
           "average": 17.5,
-          "innings": 3
+          "innings": 3,
+          "ducks_per_innings": 0.33
         },
         {
           "batsman": "Sameer Gaur",
@@ -3648,7 +3812,8 @@
           "file": 14,
           "sr": 70.07,
           "average": 9.36,
-          "innings": 14
+          "innings": 14,
+          "ducks_per_innings": 0.07
         },
         {
           "batsman": "Shankar Kartha",
@@ -3661,7 +3826,8 @@
           "file": 9,
           "sr": 69.49,
           "average": 5.12,
-          "innings": 9
+          "innings": 9,
+          "ducks_per_innings": 0.44
         },
         {
           "batsman": "Shelako Almeida",
@@ -3674,7 +3840,8 @@
           "file": 3,
           "sr": 128.57,
           "average": 4.5,
-          "innings": 3
+          "innings": 3,
+          "ducks_per_innings": 0.33
         },
         {
           "batsman": "Siddhesh Mervekar",
@@ -3687,7 +3854,8 @@
           "file": 12,
           "sr": 97.32,
           "average": 13.18,
-          "innings": 12
+          "innings": 12,
+          "ducks_per_innings": 0.25
         },
         {
           "batsman": "Syed Adil",
@@ -3700,7 +3868,8 @@
           "file": 3,
           "sr": 72.22,
           "average": 6.5,
-          "innings": 3
+          "innings": 3,
+          "ducks_per_innings": 0.33
         },
         {
           "batsman": "Utkarsh Bhatt",
@@ -3713,7 +3882,8 @@
           "file": 12,
           "sr": 129.17,
           "average": 28.18,
-          "innings": 12
+          "innings": 12,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Wilfred R",
@@ -3726,7 +3896,8 @@
           "file": 15,
           "sr": 86.58,
           "average": 9.21,
-          "innings": 15
+          "innings": 15,
+          "ducks_per_innings": 0.2
         }
       ],
       "innings_records": [
@@ -6333,6 +6504,130 @@
             "runs": 1,
             "innings": 2
           }
+        ],
+        "most_ducks": [
+          {
+            "batsman": "Michal OstykNarbutt",
+            "is_duck": 4,
+            "innings": 16,
+            "ducks_per_innings": 0.25
+          },
+          {
+            "batsman": "Shankar Kartha",
+            "is_duck": 4,
+            "innings": 9,
+            "ducks_per_innings": 0.44
+          },
+          {
+            "batsman": "Matthew Keating",
+            "is_duck": 3,
+            "innings": 17,
+            "ducks_per_innings": 0.18
+          },
+          {
+            "batsman": "Siddhesh Mervekar",
+            "is_duck": 3,
+            "innings": 12,
+            "ducks_per_innings": 0.25
+          },
+          {
+            "batsman": "Wilfred R",
+            "is_duck": 3,
+            "innings": 15,
+            "ducks_per_innings": 0.2
+          },
+          {
+            "batsman": "Jakub Blazejczyk",
+            "is_duck": 2,
+            "innings": 7,
+            "ducks_per_innings": 0.29
+          },
+          {
+            "batsman": "Kurt DSouza",
+            "is_duck": 2,
+            "innings": 10,
+            "ducks_per_innings": 0.2
+          },
+          {
+            "batsman": "Nazroon Najumudeen",
+            "is_duck": 2,
+            "innings": 14,
+            "ducks_per_innings": 0.14
+          },
+          {
+            "batsman": "Ashwini Rajput",
+            "is_duck": 1,
+            "innings": 2,
+            "ducks_per_innings": 0.5
+          },
+          {
+            "batsman": "Brian Paszkowiak",
+            "is_duck": 1,
+            "innings": 1,
+            "ducks_per_innings": 1.0
+          }
+        ],
+        "most_ducks_per_innings": [
+          {
+            "batsman": "Brian Paszkowiak",
+            "ducks_per_innings": 1.0,
+            "is_duck": 1,
+            "innings": 1
+          },
+          {
+            "batsman": "Piotr Sochaj",
+            "ducks_per_innings": 1.0,
+            "is_duck": 1,
+            "innings": 1
+          },
+          {
+            "batsman": "Ashwini Rajput",
+            "ducks_per_innings": 0.5,
+            "is_duck": 1,
+            "innings": 2
+          },
+          {
+            "batsman": "Konrad Kachel",
+            "ducks_per_innings": 0.5,
+            "is_duck": 1,
+            "innings": 2
+          },
+          {
+            "batsman": "Shankar Kartha",
+            "ducks_per_innings": 0.44,
+            "is_duck": 4,
+            "innings": 9
+          },
+          {
+            "batsman": "Prabhat Singh Gusain",
+            "ducks_per_innings": 0.33,
+            "is_duck": 1,
+            "innings": 3
+          },
+          {
+            "batsman": "Shelako Almeida",
+            "ducks_per_innings": 0.33,
+            "is_duck": 1,
+            "innings": 3
+          },
+          {
+            "batsman": "Syed Adil",
+            "ducks_per_innings": 0.33,
+            "is_duck": 1,
+            "innings": 3
+          },
+          {
+            "batsman": "Jakub Blazejczyk",
+            "ducks_per_innings": 0.29,
+            "is_duck": 2,
+            "innings": 7
+          },
+          {
+            "batsman": "Michal OstykNarbutt",
+            "ducks_per_innings": 0.25,
+            "is_duck": 4,
+            "innings": 16
+          }
         ]
       }
     },
@@ -7215,7 +7510,7 @@
     }
   },
   "2026": {
-    "last_updated": "2026-06-29T00:03:17.983017",
+    "last_updated": "2026-06-29T00:08:25.622046",
     "summary": {
       "total_matches": 12,
       "total_innings": 101,
@@ -7239,7 +7534,8 @@
           "file": 1,
           "sr": 33.33,
           "average": 1.0,
-          "innings": 1
+          "innings": 1,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Aromal Das",
@@ -7252,7 +7548,8 @@
           "file": 3,
           "sr": 120.0,
           "average": 9.0,
-          "innings": 3
+          "innings": 3,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Ashwini Rajput",
@@ -7265,7 +7562,8 @@
           "file": 5,
           "sr": 76.74,
           "average": 11.0,
-          "innings": 5
+          "innings": 5,
+          "ducks_per_innings": 0.6
         },
         {
           "batsman": "Jakub Blazejczyk",
@@ -7278,7 +7576,8 @@
           "file": 4,
           "sr": 84.62,
           "average": 11.0,
-          "innings": 4
+          "innings": 4,
+          "ducks_per_innings": 0.25
         },
         {
           "batsman": "Konrad Kachel",
@@ -7291,7 +7590,8 @@
           "file": 1,
           "sr": 33.33,
           "average": 1.0,
-          "innings": 1
+          "innings": 1,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Kurt DSouza",
@@ -7304,7 +7604,8 @@
           "file": 11,
           "sr": 67.16,
           "average": 11.25,
-          "innings": 11
+          "innings": 11,
+          "ducks_per_innings": 0.09
         },
         {
           "batsman": "Matthew Keating",
@@ -7317,7 +7618,8 @@
           "file": 12,
           "sr": 140.22,
           "average": 23.45,
-          "innings": 12
+          "innings": 12,
+          "ducks_per_innings": 0.08
         },
         {
           "batsman": "Michal OstykNarbutt",
@@ -7330,7 +7632,8 @@
           "file": 10,
           "sr": 108.33,
           "average": 16.9,
-          "innings": 10
+          "innings": 10,
+          "ducks_per_innings": 0.1
         },
         {
           "batsman": "Nazroon Najumudeen",
@@ -7343,7 +7646,8 @@
           "file": 3,
           "sr": 63.83,
           "average": 10.0,
-          "innings": 3
+          "innings": 3,
+          "ducks_per_innings": 0.33
         },
         {
           "batsman": "Neel",
@@ -7356,7 +7660,8 @@
           "file": 12,
           "sr": 127.37,
           "average": 24.2,
-          "innings": 12
+          "innings": 12,
+          "ducks_per_innings": 0.17
         },
         {
           "batsman": "Prabhat Singh Gusain",
@@ -7369,7 +7674,8 @@
           "file": 6,
           "sr": 72.0,
           "average": 3.6,
-          "innings": 6
+          "innings": 6,
+          "ducks_per_innings": 0.5
         },
         {
           "batsman": "Sameer Gaur",
@@ -7382,7 +7688,8 @@
           "file": 10,
           "sr": 132.19,
           "average": 24.12,
-          "innings": 10
+          "innings": 10,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Sanjay Pawar",
@@ -7395,7 +7702,8 @@
           "file": 1,
           "sr": 86.36,
           "average": 19.0,
-          "innings": 1
+          "innings": 1,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Shashikanth Acharya",
@@ -7408,7 +7716,8 @@
           "file": 2,
           "sr": 83.33,
           "average": 20.0,
-          "innings": 2
+          "innings": 2,
+          "ducks_per_innings": 0.5
         },
         {
           "batsman": "Siddhesh Mervekar",
@@ -7421,7 +7730,8 @@
           "file": 6,
           "sr": 87.39,
           "average": 19.4,
-          "innings": 6
+          "innings": 6,
+          "ducks_per_innings": 0.17
         },
         {
           "batsman": "Sivananda Panda",
@@ -7434,7 +7744,8 @@
           "file": 1,
           "sr": 0.0,
           "average": 0.0,
-          "innings": 1
+          "innings": 1,
+          "ducks_per_innings": 1.0
         },
         {
           "batsman": "Syed Adil",
@@ -7447,7 +7758,8 @@
           "file": 1,
           "sr": 114.29,
           "average": 8.0,
-          "innings": 1
+          "innings": 1,
+          "ducks_per_innings": 0.0
         },
         {
           "batsman": "Utkarsh Bhatt",
@@ -7460,7 +7772,8 @@
           "file": 4,
           "sr": 176.19,
           "average": 18.5,
-          "innings": 4
+          "innings": 4,
+          "ducks_per_innings": 0.25
         },
         {
           "batsman": "Vishal Patil",
@@ -7473,7 +7786,8 @@
           "file": 5,
           "sr": 90.48,
           "average": 7.6,
-          "innings": 5
+          "innings": 5,
+          "ducks_per_innings": 0.4
         },
         {
           "batsman": "Wilfred R",
@@ -7486,7 +7800,8 @@
           "file": 3,
           "sr": 16.67,
           "average": 1.0,
-          "innings": 3
+          "innings": 3,
+          "ducks_per_innings": 0.33
         }
       ],
       "innings_records": [
@@ -9084,6 +9399,130 @@
             "sixes": 0,
             "runs": 22,
             "innings": 4
+          }
+        ],
+        "most_ducks": [
+          {
+            "batsman": "Ashwini Rajput",
+            "is_duck": 3,
+            "innings": 5,
+            "ducks_per_innings": 0.6
+          },
+          {
+            "batsman": "Prabhat Singh Gusain",
+            "is_duck": 3,
+            "innings": 6,
+            "ducks_per_innings": 0.5
+          },
+          {
+            "batsman": "Neel",
+            "is_duck": 2,
+            "innings": 12,
+            "ducks_per_innings": 0.17
+          },
+          {
+            "batsman": "Vishal Patil",
+            "is_duck": 2,
+            "innings": 5,
+            "ducks_per_innings": 0.4
+          },
+          {
+            "batsman": "Jakub Blazejczyk",
+            "is_duck": 1,
+            "innings": 4,
+            "ducks_per_innings": 0.25
+          },
+          {
+            "batsman": "Kurt DSouza",
+            "is_duck": 1,
+            "innings": 11,
+            "ducks_per_innings": 0.09
+          },
+          {
+            "batsman": "Matthew Keating",
+            "is_duck": 1,
+            "innings": 12,
+            "ducks_per_innings": 0.08
+          },
+          {
+            "batsman": "Michal OstykNarbutt",
+            "is_duck": 1,
+            "innings": 10,
+            "ducks_per_innings": 0.1
+          },
+          {
+            "batsman": "Nazroon Najumudeen",
+            "is_duck": 1,
+            "innings": 3,
+            "ducks_per_innings": 0.33
+          },
+          {
+            "batsman": "Shashikanth Acharya",
+            "is_duck": 1,
+            "innings": 2,
+            "ducks_per_innings": 0.5
+          }
+        ],
+        "most_ducks_per_innings": [
+          {
+            "batsman": "Sivananda Panda",
+            "ducks_per_innings": 1.0,
+            "is_duck": 1,
+            "innings": 1
+          },
+          {
+            "batsman": "Ashwini Rajput",
+            "ducks_per_innings": 0.6,
+            "is_duck": 3,
+            "innings": 5
+          },
+          {
+            "batsman": "Prabhat Singh Gusain",
+            "ducks_per_innings": 0.5,
+            "is_duck": 3,
+            "innings": 6
+          },
+          {
+            "batsman": "Shashikanth Acharya",
+            "ducks_per_innings": 0.5,
+            "is_duck": 1,
+            "innings": 2
+          },
+          {
+            "batsman": "Vishal Patil",
+            "ducks_per_innings": 0.4,
+            "is_duck": 2,
+            "innings": 5
+          },
+          {
+            "batsman": "Nazroon Najumudeen",
+            "ducks_per_innings": 0.33,
+            "is_duck": 1,
+            "innings": 3
+          },
+          {
+            "batsman": "Wilfred R",
+            "ducks_per_innings": 0.33,
+            "is_duck": 1,
+            "innings": 3
+          },
+          {
+            "batsman": "Jakub Blazejczyk",
+            "ducks_per_innings": 0.25,
+            "is_duck": 1,
+            "innings": 4
+          },
+          {
+            "batsman": "Utkarsh Bhatt",
+            "ducks_per_innings": 0.25,
+            "is_duck": 1,
+            "innings": 4
+          },
+          {
+            "batsman": "Neel",
+            "ducks_per_innings": 0.17,
+            "is_duck": 2,
+            "innings": 12
           }
         ]
       }
