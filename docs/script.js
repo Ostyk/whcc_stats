@@ -121,8 +121,78 @@ function displayStats(year) {
         
         // Display all players
         displayAllPlayers(statsData.batting.season_stats);
+        initializePlayerInningsExplorer(statsData.batting);
     } else {
         clearLeaderboards();
+        initializePlayerInningsExplorer({ innings_records: [] });
+    }
+        currentInningsRecords = (battingData && battingData.innings_records) ? battingData.innings_records : [];
+
+        if (currentInningsRecords.length === 0) {
+            select.innerHTML = '';
+            title.textContent = 'Recent innings';
+            tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; color: #888;">No innings data</td></tr>';
+            return;
+        }
+
+        const currentSelection = select.value;
+        const players = [...new Set(currentInningsRecords.map(r => r.batsman))].sort((a, b) => a.localeCompare(b));
+
+        select.innerHTML = players.map(player => `<option value="${player}">${player}</option>`).join('');
+
+        if (currentSelection && players.includes(currentSelection)) {
+            select.value = currentSelection;
+        } else {
+            select.value = players[0];
+        }
+
+        renderPlayerRecentInnings();
+    }
+
+    function renderPlayerRecentInnings() {
+        const select = document.getElementById('playerInningsSelect');
+        const limitInput = document.getElementById('inningsLimit');
+        const title = document.getElementById('playerInningsTitle');
+        const tbody = document.getElementById('playerRecentInningsBody');
+
+        if (!select || !limitInput || !title || !tbody) return;
+
+        const selectedPlayer = select.value;
+        const limit = Math.max(1, Math.min(50, parseInt(limitInput.value || '10', 10)));
+        limitInput.value = limit;
+
+        if (!selectedPlayer) {
+            tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; color: #888;">Select a player</td></tr>';
+            return;
+        }
+
+        const rows = currentInningsRecords
+            .filter(r => r.batsman === selectedPlayer)
+            .sort((a, b) => new Date(b.match_date) - new Date(a.match_date))
+            .slice(0, limit);
+
+        title.textContent = `${selectedPlayer} - last ${rows.length} innings`;
+
+        if (rows.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; color: #888;">No innings found</td></tr>';
+            return;
+        }
+
+        tbody.innerHTML = '';
+        rows.forEach(inn => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${formatValue(inn.match_date)}</td>
+                <td>${formatValue(inn.file)}</td>
+                <td>${formatValue(inn.runs, 'runs')}</td>
+                <td>${formatValue(inn.balls, 'balls')}</td>
+                <td>${formatValue(inn.fours, 'fours')}</td>
+                <td>${formatValue(inn.sixes, 'sixes')}</td>
+                <td>${formatValue(inn.sr, 'sr')}</td>
+                <td>${formatValue(inn.status)}</td>
+            `;
+            tbody.appendChild(tr);
+        });
     }
     
     // Display bowling leaderboards
@@ -133,6 +203,18 @@ function displayStats(year) {
             ['bowler', 'wickets', 'runs', 'overs']);
         displayLeaderboard('bestEconomy', statsData.bowling.leaderboards.best_economy, 
             ['bowler', 'economy', 'overs', 'wickets']);
+    }
+
+    // Display fielding leaderboards
+    if (statsData.fielding && statsData.fielding.leaderboards) {
+        displayLeaderboard('mostCatches', statsData.fielding.leaderboards.most_catches,
+            ['fielder', 'catches', 'dismissals', 'matches']);
+        displayLeaderboard('mostRunOuts', statsData.fielding.leaderboards.most_run_outs,
+            ['fielder', 'run_outs', 'direct_hits', 'matches']);
+        displayLeaderboard('mostStumpings', statsData.fielding.leaderboards.most_stumpings,
+            ['fielder', 'stumpings', 'dismissals', 'matches']);
+        displayLeaderboard('mostDismissalsFielding', statsData.fielding.leaderboards.most_dismissals,
+            ['fielder', 'dismissals', 'catches', 'run_outs', 'stumpings']);
     }
 }
 
@@ -153,7 +235,8 @@ function showNoDataMessage(year) {
 
 function clearLeaderboards() {
     const tables = ['topRunScorers', 'highestScores', 'bestAverages', 'bestStrikeRates', 
-                    'mostFours', 'mostSixes', 'topWicketTakers', 'bestFigures', 'bestEconomy'];
+                    'mostFours', 'mostSixes', 'topWicketTakers', 'bestFigures', 'bestEconomy',
+                    'mostCatches', 'mostRunOuts', 'mostStumpings', 'mostDismissalsFielding'];
     tables.forEach(tableId => {
         const tbody = document.querySelector(`#${tableId} tbody`);
         if (tbody) tbody.innerHTML = '';
