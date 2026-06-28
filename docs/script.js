@@ -1,6 +1,7 @@
 let allStatsData = null;
 let currentYear = '2026'; // Default to 2026
 let currentInningsRecords = [];
+let leaderboardLimit = 10; // Show top 10 by default; toggle reveals the rest
 
 // Load data on page load
 document.addEventListener('DOMContentLoaded', () => {
@@ -265,8 +266,9 @@ function displayLeaderboard(tableId, data, columns) {
         return;
     }
     
+    const rows = (leaderboardLimit === null) ? data : data.slice(0, leaderboardLimit);
     tbody.innerHTML = '';
-    data.forEach((row, index) => {
+    rows.forEach((row, index) => {
         const tr = document.createElement('tr');
         tr.innerHTML = `
             <td>${index + 1}</td>
@@ -274,6 +276,13 @@ function displayLeaderboard(tableId, data, columns) {
         `;
         tbody.appendChild(tr);
     });
+}
+
+function toggleLeaderboardLimit() {
+    leaderboardLimit = (leaderboardLimit === null) ? 10 : null;
+    const btn = document.getElementById('leaderboardToggle');
+    if (btn) btn.textContent = (leaderboardLimit === null) ? 'Show top 10' : 'Show all';
+    if (allStatsData) displayStats(currentYear);
 }
 
 function displayAllPlayers(players) {
