@@ -1,5 +1,6 @@
 let allStatsData = null;
 let currentYear = '2026'; // Default to 2026
+let currentInningsRecords = [];
 
 // Load data on page load
 document.addEventListener('DOMContentLoaded', () => {
@@ -126,12 +127,42 @@ function displayStats(year) {
         clearLeaderboards();
         initializePlayerInningsExplorer({ innings_records: [] });
     }
+
+    // Display bowling leaderboards
+    if (statsData.bowling && statsData.bowling.leaderboards) {
+        displayLeaderboard('topWicketTakers', statsData.bowling.leaderboards.top_wicket_takers, 
+            ['bowler', 'wickets', 'average', 'economy']);
+        displayLeaderboard('bestFigures', statsData.bowling.leaderboards.best_figures, 
+            ['bowler', 'wickets', 'runs', 'overs']);
+        displayLeaderboard('bestEconomy', statsData.bowling.leaderboards.best_economy, 
+            ['bowler', 'economy', 'overs', 'wickets']);
+    }
+
+    // Display fielding leaderboards
+    if (statsData.fielding && statsData.fielding.leaderboards) {
+        displayLeaderboard('mostCatches', statsData.fielding.leaderboards.most_catches,
+            ['fielder', 'catches', 'dismissals', 'matches']);
+        displayLeaderboard('mostRunOuts', statsData.fielding.leaderboards.most_run_outs,
+            ['fielder', 'run_outs', 'direct_hits', 'matches']);
+        displayLeaderboard('mostStumpings', statsData.fielding.leaderboards.most_stumpings,
+            ['fielder', 'stumpings', 'dismissals', 'matches']);
+        displayLeaderboard('mostDismissalsFielding', statsData.fielding.leaderboards.most_dismissals,
+            ['fielder', 'dismissals', 'catches', 'run_outs', 'stumpings']);
+    }
+}
+
+function initializePlayerInningsExplorer(battingData) {
+    const select = document.getElementById('playerInningsSelect');
+    const title = document.getElementById('playerInningsTitle');
+    const tbody = document.getElementById('playerRecentInningsBody');
+    if (!select || !title || !tbody) return;
+
         currentInningsRecords = (battingData && battingData.innings_records) ? battingData.innings_records : [];
 
         if (currentInningsRecords.length === 0) {
             select.innerHTML = '';
             title.textContent = 'Recent innings';
-            tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; color: #888;">No innings data</td></tr>';
+            tbody.innerHTML = '<tr><td colspan="9" style="text-align: center; color: #888;">No innings data</td></tr>';
             return;
         }
 
@@ -162,7 +193,7 @@ function displayStats(year) {
         limitInput.value = limit;
 
         if (!selectedPlayer) {
-            tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; color: #888;">Select a player</td></tr>';
+            tbody.innerHTML = '<tr><td colspan="9" style="text-align: center; color: #888;">Select a player</td></tr>';
             return;
         }
 
@@ -174,7 +205,7 @@ function displayStats(year) {
         title.textContent = `${selectedPlayer} - last ${rows.length} innings`;
 
         if (rows.length === 0) {
-            tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; color: #888;">No innings found</td></tr>';
+            tbody.innerHTML = '<tr><td colspan="9" style="text-align: center; color: #888;">No innings found</td></tr>';
             return;
         }
 
@@ -190,33 +221,11 @@ function displayStats(year) {
                 <td>${formatValue(inn.sixes, 'sixes')}</td>
                 <td>${formatValue(inn.sr, 'sr')}</td>
                 <td>${formatValue(inn.status)}</td>
+                <td>${inn.is_duck ? 'Yes' : '-'}</td>
             `;
             tbody.appendChild(tr);
         });
     }
-    
-    // Display bowling leaderboards
-    if (statsData.bowling && statsData.bowling.leaderboards) {
-        displayLeaderboard('topWicketTakers', statsData.bowling.leaderboards.top_wicket_takers, 
-            ['bowler', 'wickets', 'average', 'economy']);
-        displayLeaderboard('bestFigures', statsData.bowling.leaderboards.best_figures, 
-            ['bowler', 'wickets', 'runs', 'overs']);
-        displayLeaderboard('bestEconomy', statsData.bowling.leaderboards.best_economy, 
-            ['bowler', 'economy', 'overs', 'wickets']);
-    }
-
-    // Display fielding leaderboards
-    if (statsData.fielding && statsData.fielding.leaderboards) {
-        displayLeaderboard('mostCatches', statsData.fielding.leaderboards.most_catches,
-            ['fielder', 'catches', 'dismissals', 'matches']);
-        displayLeaderboard('mostRunOuts', statsData.fielding.leaderboards.most_run_outs,
-            ['fielder', 'run_outs', 'direct_hits', 'matches']);
-        displayLeaderboard('mostStumpings', statsData.fielding.leaderboards.most_stumpings,
-            ['fielder', 'stumpings', 'dismissals', 'matches']);
-        displayLeaderboard('mostDismissalsFielding', statsData.fielding.leaderboards.most_dismissals,
-            ['fielder', 'dismissals', 'catches', 'run_outs', 'stumpings']);
-    }
-}
 
 function showNoDataMessage(year) {
     const tables = document.querySelectorAll('table tbody');
@@ -284,6 +293,7 @@ function displayAllPlayers(players) {
             <td>${formatValue(player.balls, 'balls')}</td>
             <td>${formatValue(player.fours, 'fours')}</td>
             <td>${formatValue(player.sixes, 'sixes')}</td>
+            <td>${formatValue(player.is_duck, 'innings')}</td>
         `;
         tbody.appendChild(tr);
     });
