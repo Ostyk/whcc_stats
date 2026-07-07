@@ -5,6 +5,22 @@ let leaderboardLimit = 10; // Show top 10 by default; toggle reveals the rest
 
 // Load data on page load
 document.addEventListener('DOMContentLoaded', () => {
+    // Auth disabled: data is embedded as plaintext, skip the login gate.
+    if (window.AUTH_ENABLED === false) {
+        try {
+            const node = document.getElementById('statsData');
+            allStatsData = JSON.parse(node.textContent);
+            const overlay = document.getElementById('loginOverlay');
+            if (overlay) overlay.style.display = 'none';
+            document.getElementById('appRoot').hidden = false;
+            initializeYearSelector();
+            displayStats(currentYear);
+        } catch (e) {
+            console.error('Failed to load embedded stats:', e);
+        }
+        return;
+    }
+
     const form = document.getElementById('loginForm');
     if (form) {
         form.addEventListener('submit', async (e) => {
