@@ -5,58 +5,40 @@ let leaderboardLimit = 10; // Show top 10 by default; toggle reveals the rest
 
 // Load data on page load
 document.addEventListener('DOMContentLoaded', () => {
-    // Try to load from embedded script tag first (for offline/file:// access)
-    const embeddedData = document.getElementById('statsData');
-    if (embeddedData && embeddedData.textContent) {
-        try {
-            allStatsData = JSON.parse(embeddedData.textContent);
-            console.log('✓ Stats loaded from embedded data');
-            initializeYearSelector();
-            displayStats(currentYear);
-            return;
-        } catch (e) {
-            console.log('Failed to parse embedded data:', e);
-        }
+    const form = document.getElementById('loginForm');
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const pass = document.getElementById('loginPass').value;
+            const errEl = document.getElementById('loginError');
+            errEl.textContent = '';
+            try {
+                await unlockStats(pass);
+                document.getElementById('loginOverlay').style.display = 'none';
+                document.getElementById('appRoot').hidden = false;
+                initializeYearSelector();
+                displayStats(currentYear);
+            } catch (err) {
+                errEl.textContent = 'Incorrect password.';
+            }
+        });
     }
-    
-    // Fallback to fetch (for server/GitHub Pages)
-    loadStats();
 });
 
-async function loadStats() {
-    try {
-        const response = await fetch('stats.json');
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        allStatsData = await response.json();
-        console.log('✓ Stats loaded from fetch');
-        initializeYearSelector();
-        displayStats(currentYear);
-    } catch (error) {
-        console.error('Error loading stats:', error);
-        // Show error message to user
-        const mainContent = document.querySelector('main');
-        if (mainContent) {
-            mainContent.innerHTML = `
-                <div style="text-align: center; padding: 50px; color: #666;">
-                    <h2>⚠️ Unable to Load Statistics</h2>
-                    <p style="margin: 20px 0;">Could not load cricket statistics.</p>
-                    <p><strong>Error:</strong> ${error.message}</p>
-                    <hr style="margin: 30px 0; border: none; border-top: 1px solid #ddd;">
-                    <div style="text-align: left; max-width: 600px; margin: 0 auto; background: #f5f5f5; padding: 20px; border-radius: 8px;">
-                        <p><strong>If viewing locally:</strong></p>
-                        <ol>
-                            <li>Make sure you're in the docs folder</li>
-                            <li>Start a local server: <code style="background: white; padding: 2px 8px; border-radius: 4px;">python3 -m http.server 8000</code></li>
-                            <li>Visit: <a href="http://localhost:8000">http://localhost:8000</a></li>
-                        </ol>
-                        <p style="margin-top: 15px;"><strong>Or:</strong> Open the browser console (F12) to see detailed errors.</p>
-                    </div>
-                </div>
-            `;
-        }
-    }
+async function unlockStats(password) {
+    const node = document.getElementById('statsData');
+    const payload = JSON.parse(node.textContent);
+    const salt = Uint8Array.from(atob(payload.salt), c => c.charCodeAt(0));
+    const iv = Uint8Array.from(atob(payload.iv), c => c.charCodeAt(0));
+    const ct = Uint8Array.from(atob(payload.ct), c => c.charCodeAt(0));
+    const baseKey = await crypto.subtle.importKey('raw', new TextEncoder().encode(password), 'PBKDF2', false, ['deriveKey']);
+    const key = await crypto.subtle.deriveKey(
+        { name: 'PBKDF2', salt, iterations: payload.iterations, hash: 'SHA-256' },
+        baseKey, { name: 'AES-GCM', length: 256 }, false, ['decrypt']
+    );
+    const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ct);
+    allStatsData = JSON.parse(new TextDecoder().decode(plain));
+    console.log('✓ Stats decrypted');
 }
 
 function initializeYearSelector() {
